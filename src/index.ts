@@ -7,6 +7,7 @@ import billsPaymntent from "./routes/billsPayment";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import options from './swagger';
+import option from './productionSwagger';
 import moneyTransferRouter from "./routes/moneyTransfer";
 import virtualCardRouter from "./routes/virtualCard";
 import utilityBillRouter from "./routes/utilityBills";
@@ -33,6 +34,9 @@ app.use('/betting', bettingRouter)
 
 const spec = swaggerJsDoc(options);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spec));
+
+const specs = swaggerJsDoc(option);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use(function (err, req, res, next){
     res.status(500).json({message: err.message})
