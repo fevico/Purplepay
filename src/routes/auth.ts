@@ -1,10 +1,12 @@
 import { Router } from "express";
 import { createUser, login, resetPassword, sendForgetPasswordToken, setTransactionPin, updateProfile, verifyAuthToken, verifyForgetPasswordToken, verifyTransactionPin } from "src/controller/auth";
 import { isAuth } from "src/middleware/auth";
+import validate from "src/middleware/validator";
+import { userSchema } from "src/utils/validationschema";
 
 const authRouter = Router()
 
-authRouter.post('/create', createUser)
+authRouter.post('/create', validate(userSchema), createUser)
 authRouter.post('/verify-auth-token', verifyAuthToken)
 authRouter.put('/update-profile', updateProfile)
 authRouter.post('/login', login)
