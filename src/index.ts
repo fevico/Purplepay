@@ -34,11 +34,11 @@ app.use('/wallet', walletRouter)
 app.use('/betting', bettingRouter)
 app.use('webHook', webHookRouter)
 
-const spec = swaggerJsDoc(options);
-app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
+// const spec = swaggerJsDoc(options);
+// app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
 
-// const specs = swaggerJsDoc(option);
-// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+const specs = swaggerJsDoc(option);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use(function (err, req, res, next){
     res.status(500).json({message: err.message})
