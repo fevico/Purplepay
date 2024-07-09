@@ -15,9 +15,17 @@ import giftCardRouter from "./routes/giftCard";
 import walletRouter from "./routes/wallet";
 import bettingRouter from "./routes/betting";
 import webHookRouter from "./routes/webHook";
+import cors from "cors";
 
 
 const app = express()
+
+app.use(
+    cors({
+      origin: "*",
+      credentials: false,
+    })
+  );
 
 app.use(express.static('src/public'));
 
