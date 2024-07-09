@@ -21,8 +21,8 @@ const option = {
                         email:{ 
                             type: "string",
                             format: "name",
-                            default: "John",
-                            description: "User's first name"
+                            default: "example@example.com",
+                            description: "User's email"
                         },
                         password:{
                             type: "string",
