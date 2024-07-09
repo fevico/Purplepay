@@ -18,7 +18,7 @@ const option = {
                     type: "object",
                     required: ["email", "password"],
                     properties:{
-                        firstName:{ 
+                        email:{ 
                             type: "string",
                             format: "name",
                             default: "John",
