@@ -24,7 +24,7 @@ const options = {
                             default: "example@example.com",
                             description: "User's email"
                         },
-                        password:{
+                        password:{ 
                             type: "string",
                             format: "password",
                             description: "User's password",
