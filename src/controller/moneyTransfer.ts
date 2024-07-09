@@ -63,7 +63,7 @@ export const getAccountName: RequestHandler = async (req, res) =>{
 
 export const moneyTransfer: RequestHandler = async (req, res) =>{
         const {bank_code, account_number, narration, amount, name_enquiry_reference} = req.body
-    const options = {
+    const options = { 
         method: 'POST',
         url: `https://strowallet.com/api/banks/request/`,
         params: {

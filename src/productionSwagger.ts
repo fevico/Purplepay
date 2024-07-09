@@ -8,7 +8,7 @@ const option = {
         },
         servers:[
             {
-                url: "http://localhost:2000/",
+                url: "https://purplepay.com.ng/",
                 description: "Production server",
             }
         ],
@@ -105,6 +105,7 @@ const option = {
                         },
                     }
                 },
+
                 billsPayment:{
                     type: "object",
                     required: ["service_name", "amount", "phone", "variation_code", "service_id"],
@@ -138,6 +139,43 @@ const option = {
                             format: "name",
                             description: "Network to subscribe to",
                             default: "mtn-data"
+                        },
+                    }
+                },
+
+                moneyTransfer:{
+                    type: "object",
+                    required: ["bank_code", "amount", "account_number", "narration", "name_enquiry_reference"],
+                    properties:{
+                        bank_code:{ 
+                            type: "string",
+                            format: "name",
+                            default: "000004",
+                            description: "Bank code for each bank"
+                        },
+                        amount:{
+                            type: "string",
+                            format: "name",
+                            description: "amount to transfer",
+                            default: "100"
+                        },
+                        account_number:{
+                            type: "string",
+                            format: "name",
+                            description: "Account Number to transfer to",
+                            default: "2108334757"
+                        },
+                        narration:{
+                            type: "string",
+                            format: "name",
+                            description: "money description",
+                            default: "school fees"
+                        },
+                        name_enquiry_reference:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
                         },
                     }
                 },
@@ -185,6 +223,7 @@ const option = {
         "./src/routes/wallet.ts",
         "./src/routes/utilityBills.ts",
         "./src/routes/billsPayment.ts",
+        "./src/routes/moneyTransfer.ts",
    ]
 };
 

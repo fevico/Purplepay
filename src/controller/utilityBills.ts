@@ -37,8 +37,8 @@ export const acessToken: RequestHandler = async (req, res, next) => {
             client_id: CLIENT_ID,
             client_secret: CLIENT_SECRET,
             grant_type: 'client_credentials',
-            audience: 'https://utilities-sandbox.reloadly.com'
-        })
+            audience: 'https://giftcards.reloadly.com'
+          })
     };
 
     try {

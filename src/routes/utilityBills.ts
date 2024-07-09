@@ -19,7 +19,7 @@ utilityBillRouter.post('/pay-biller', isAuth, acessToken, payBillers)
  * @swagger
  * /utility/get-biller:
  *   get:
- *     summary: Get Biller details
+ *     summary: Get Biller details 
  *     tags:
  *       - utilityBills
  *     responses:
