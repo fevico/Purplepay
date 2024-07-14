@@ -40,7 +40,7 @@ app.use('/utility',utilityBillRouter)
 app.use("/gift-card", giftCardRouter)
 app.use('/wallet', walletRouter)
 app.use('/betting', bettingRouter)
-app.use('webHook', webHookRouter)
+app.use('/webHook', webHookRouter)
 
 // const spec = swaggerJsDoc(options);
 // app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
