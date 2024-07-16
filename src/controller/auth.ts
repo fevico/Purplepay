@@ -2,7 +2,7 @@ import { RequestHandler } from "express";
 import TokenModel from "src/model/authToken";
 import userModel from "src/model/user";
 import { generateToken, sendErrorRes } from "src/utils/helper";
-import { sendVerificationToken } from "src/utils/mail";
+import { ForgetPasswordToken, sendVerificationToken } from "src/utils/mail";
 import jwt from "jsonwebtoken";
 import passwordResetTokenModel from "src/model/passwordResetToken";
 
@@ -58,6 +58,8 @@ export const login: RequestHandler = async (req, res) => {
       if (!user) {
         return sendErrorRes(res, "User not found!", 404);
       }
+
+      if(!user.verified) return sendErrorRes(res, "User not verified! Please verify your email address", 403);
   
       // Compare provided password with stored password
       const matchPassword = await user.comparePassword(password);
@@ -74,7 +76,8 @@ export const login: RequestHandler = async (req, res) => {
       res.json({ token });
     } catch (error) {
       // Handle any unexpected errors
-      sendErrorRes(res, "Something went wrong!", 500);
+      console.log(error)
+      sendErrorRes(res, "Something went wrong!", 500); 
     }
   };
 
@@ -102,7 +105,9 @@ export const sendForgetPasswordToken: RequestHandler = async (req, res) => {
   const user = await userModel.findOne({ email });
   if (!user) return sendErrorRes(res, "User not found!", 404);
   const token = generateToken()
-  await passwordResetTokenModel.create({ token, user: user._id})
+  await passwordResetTokenModel.create({ token, owner: user._id})
+
+  ForgetPasswordToken(email, token, user.name);
   
   res.json({ message: "Token sent to your email!" });
 }
@@ -113,7 +118,7 @@ export const verifyForgetPasswordToken: RequestHandler = async (req, res) => {
   if (!passwordResetToken) return sendErrorRes(res, "Invalid or expired token!", 404);
   const user = await userModel.findById(owner);
   if (!user) return sendErrorRes(res, "User not found!", 404);
-  const tokenMatch = await user.comparePassword(token);
+  const tokenMatch = await passwordResetToken.compareToken(token);
   if(!tokenMatch) return sendErrorRes(res, "Invalid or expired token!", 404);
   res.json({message: "Token verified sucessfully!"})
 }
@@ -125,7 +130,7 @@ export const resetPassword: RequestHandler = async (req, res) => {
   user.password = password;
   await user.save();
   
-  await passwordResetTokenModel.findByIdAndDelete({owner: user._id});
+  await passwordResetTokenModel.findOneAndDelete({owner: user._id});
   res.json({message: "Password reset successfully!"})
 }
   

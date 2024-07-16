@@ -179,6 +179,103 @@ const option = {
                         },
                     }
                 },
+                
+                giftCard:{
+                    type: "object",
+                    required: ["productId", "quantity", "unitPrice", "senderName", "recipientEmail"],
+                    properties:{
+                        productId:{ 
+                            type: "string",
+                            format: "name",
+                            default: "10",
+                            description: "product id for each gift card"
+                        },
+                        quantity:{
+                            type: "string",
+                            format: "name",
+                            description: "number of gift cards to purchase",
+                            default: "1"
+                        },
+                        unitPrice:{
+                            type: "string",
+                            format: "name",
+                            description: "price of each gift card",
+                            default: "1000"
+                        },
+                        senderName:{
+                            type: "string",
+                            format: "name",
+                            description: "name of the sender",
+                            default: "John Doe"
+                        },
+                        recipientEmail:{
+                            type: "string",
+                            format: "name",
+                            description: "email of the recipient",
+                            default: "example@gmail.com"
+                        },
+                    }
+                },
+                virtualCard:{
+                    type: "object",
+                    required: ["firstName", "lastName", "customerEmail", "houseNumber", "phoneNumber", "dateOfBirth", "idImage", "userPhoto", "line1"],
+                    properties:{
+                        firstName:{ 
+                            type: "string",
+                            format: "name",
+                            default: "John",
+                            description: "First name of the card owner"
+                        },
+                        lastName:{
+                            type: "string",
+                            format: "name",
+                            description: "First name of the card owner",
+                            default: "Doe"
+                        },
+                        houseNumber:{
+                            type: "string",
+                            format: "name",
+                            description: "House number of the card owner",
+                            default: "lekki"
+                        },
+                        customerEmail:{
+                            type: "string",
+                            format: "name",
+                            description: "Email of card owner",
+                            default: "school fees"
+                        },
+                        idNumber:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
+                        },
+                        phoneNumber:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
+                        },
+                        dateOfBirth:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
+                        },
+                        idImage:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
+                        },
+                        line1:{
+                            type: "string",
+                            format: "name",
+                            description: "sessionId from get acount name",
+                            default: "090286240704083544873401308920"
+                        },
+                    }
+                },
             },
             responses:{
                 200:{
@@ -224,6 +321,8 @@ const option = {
         "./src/routes/utilityBills.ts",
         "./src/routes/billsPayment.ts",
         "./src/routes/moneyTransfer.ts",
+        "./src/routes/giftCard.ts",
+        "./src/routes/virtualCard.ts",
    ]
 };
 

@@ -46,7 +46,7 @@ try {
 
 export const getProducts: RequestHandler = async (req, res) => {
     const fetch = require('node-fetch'); 
-    const { size, page, productName, countryCode, includeRange, includeFixed } = req.query;
+    // const { size, page, productName, countryCode, includeRange, includeFixed } = req.query;
     // const url = `https://giftcards.reloadly.com/products?size=${size}&page=${page}&productName=${productName}&countryCode=${countryCode}&includeRange=${includeRange}&includeFixed=${includeFixed}`;
     const url = 'https://giftcards-sandbox.reloadly.com/products'; 
     const options = {

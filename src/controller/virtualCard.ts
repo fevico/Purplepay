@@ -68,7 +68,8 @@ export const createCustomer: RequestHandler = async (req, res) => {
 }
 
 export const createCard: RequestHandler = async (req, res) => {
-    const { name_on_card, amount, customerEmail, card_type } = req.body;
+    const { name_on_card, amount, customerEmail } = req.body;
+    const cardType = 'visa'
 
     if (!name_on_card) {
         return res.status(400).json({ message: "name_on_card is required" });
@@ -80,7 +81,7 @@ export const createCard: RequestHandler = async (req, res) => {
         params: {
             public_key: PUBLIC_KEY, 
             name_on_card: name_on_card,
-            card_type: card_type,
+            card_type: cardType,
             amount: amount,
             customerEmail: customerEmail,
         },
@@ -330,6 +331,7 @@ export const withdrawFromCard: RequestHandler = async (req, res) => {
         res.status(500).json({ message: "Error fetching data plans" });
     }
 }
+
 export const cardStatus: RequestHandler = async (req, res) => {
     const { reference} = req.body;
 
