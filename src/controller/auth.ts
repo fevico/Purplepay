@@ -21,17 +21,40 @@ export const createUser: RequestHandler = async (req, res) => {
  
 export const verifyAuthToken: RequestHandler = async (req, res) => {
   const { owner, token } = req.body;
+
+  // Check if the token document exists for the owner
   const tokenDoc = await TokenModel.findOne({ owner });
-  if (!tokenDoc)
-    return sendErrorRes(res, "Uanthorize request, Invalid token!", 403);
+  if (!tokenDoc) return sendErrorRes(res, "Unauthorized request, Invalid token!", 403);
+
+  // Check if the user exists
   const user = await userModel.findById(owner);
-  if (!user)
-    return sendErrorRes(res, "Uanthorize request, Invalid token!", 403);
-  const matchToken = tokenDoc.compareToken(token);
+  if (!user) return sendErrorRes(res, "Unauthorized request, Invalid token!", 403);
+
+  // Compare the token
+  const matchToken = await tokenDoc.compareToken(token); // Await here
+
   if (!matchToken) return sendErrorRes(res, "Invalid token!", 403);
+
+  // Update user verification status
   user.verified = true;
   await user.save();
-  return res.json({ message: "user verified" });
+
+  await TokenModel.findByIdAndDelete(tokenDoc._id); // Correct usage
+
+  return res.json({ message: "User verified" });
+};
+
+
+export const resendOtp: RequestHandler = async (req, res) => { 
+  const { email } = req.body;
+  const user = await userModel.findOne({ email });
+  if (!user) return sendErrorRes(res, "User not found!", 404);
+  if (user.verified) return sendErrorRes(res, "User already verified!", 403);
+  const token = generateToken();
+  const tokenExist = await TokenModel.findOneAndDelete({ owner: user._id });
+  await TokenModel.create({ owner: user._id, token });
+  sendVerificationToken(email, token);
+  return res.json({ message: "Verification email sent!" });
 };
 
 export const updateProfile: RequestHandler = async (req, res) => {

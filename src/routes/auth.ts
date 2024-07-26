@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUser, login, resetPassword, sendForgetPasswordToken, setTransactionPin, updateProfile, verifyAuthToken, verifyForgetPasswordToken, verifyTransactionPin } from "src/controller/auth";
+import { createUser, login, resendOtp, resetPassword, sendForgetPasswordToken, setTransactionPin, updateProfile, verifyAuthToken, verifyForgetPasswordToken, verifyTransactionPin } from "src/controller/auth";
 import { isAuth } from "src/middleware/auth";
 import validate from "src/middleware/validator";
 import { userSchema } from "src/utils/validationschema";
@@ -15,6 +15,7 @@ authRouter.post('/verify-transaction-pin', isAuth, verifyTransactionPin)
 authRouter.post('/send-forget-password-token', sendForgetPasswordToken)
 authRouter.post('/verify-forget-password-token', verifyForgetPasswordToken)
 authRouter.post('/reset-password', resetPassword)
+authRouter.post('/resend-otp', resendOtp)
 
 
 /**
@@ -124,6 +125,80 @@ authRouter.post('/reset-password', resetPassword)
  *                 message:
  *                   type: string
  *                   example: User logged in successfully
+ *       "400":
+ *         description: Bad request
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   example: Bad request
+ *       "422":
+ *         description: Unprocessable request
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   example: Unprocessable request
+ *       "403":
+ *         description: Unauthorized request
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   example: Unauthorized request
+ *       "500":
+ *         description: Internal server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *                   example: Internal server error
+ */
+
+
+/**
+ * @swagger
+ * /auth/resend-otp:
+ *   post:
+ *     summary: Resend verification code to user's email
+ *     tags:
+ *       - Users
+ *     requestBody:
+ *       required: true 
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 description: User's registered email
+ *             example:
+ *               email: "example@example.com"
+ *               password: "1234"
+ *     responses:
+ *       "200":
+ *         description: Verification code sent successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Verification code sent successfully
  *       "400":
  *         description: Bad request
  *         content:

@@ -13,6 +13,9 @@ declare module 'express-serve-static-core' {
 const CLIENT_ID = process.env.CLIENT_ID
 const CLIENT_SECRET = process.env.CLIENT_SECRET
 
+const CLIENT_ID_LIVE = process.env.CLIENT_ID_LIVE
+const CLIENT_SECRET_LIVE = process.env.CLIENT_ID_LIVE
+
 function generateReferenceId() {
     const timestamp = new Date().getTime(); // Get current timestamp in milliseconds
     const randomChars = Math.random().toString(36).substring(2, 8); // Generate random characters
@@ -34,8 +37,8 @@ export const acessToken: RequestHandler = async (req, res, next) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-            client_id: CLIENT_ID,
-            client_secret: CLIENT_SECRET,
+            client_id: CLIENT_ID_LIVE,
+            client_secret: CLIENT_SECRET_LIVE,
             grant_type: 'client_credentials',
             audience: 'https://giftcards.reloadly.com'
           })
@@ -66,7 +69,7 @@ export const getBillers: RequestHandler = async(req, res) =>{
     const fetch = require('node-fetch');
 
     const { id, name, type, serviceType, countryISOCode, page, size } = req.query;
-    const url = `https://utilities-sandbox.reloadly.com/billers?id=${id}&name=${name}&type=${type}&serviceType=${serviceType}&countryISOCode=${countryISOCode}&page=${page}&size=${size}`;
+    const url = `https://utilities.reloadly.com/billers?id=${id}&name=${name}&type=${type}&serviceType=${serviceType}&countryISOCode=${countryISOCode}&page=${page}&size=${size}`;
     const options = {
   method: 'GET',
   headers: {

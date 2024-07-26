@@ -44,11 +44,12 @@ export const validateCustormerId: RequestHandler = async (req, res) => {
     MerchantId: "fevico",
     ContentType: 'application/json'
   },
-  body: JSON.stringify({
+  body: JSON.stringify({ 
     customerId: customerId,
     provider: provider
   })
 };
+console.log(options.body)
 
 try {
     const response = await fetch(url, options);

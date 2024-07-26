@@ -27,7 +27,7 @@ export const getListOfBank: RequestHandler = async (req, res) =>{
 }
 
 export const getAccountName: RequestHandler = async (req, res) =>{
-        const {bank_code, account_number} = req.body
+        const {bank_code, account_number} = req.query
     const options = {
         method: 'GET',
         url: `https://strowallet.com/api/banks/get-customer-name/`,

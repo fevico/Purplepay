@@ -5,9 +5,8 @@ import { sendErrorRes } from "src/utils/helper";
 
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
-
 export const getAllDataPlans: RequestHandler = async (req, res) => {
-    const { service_name } = req.body;
+    const { service_name } = req.query; // Extract service_name from query parameters
 
     if (!service_name) {
         return res.status(400).json({ message: "service_name is required" });
@@ -18,7 +17,7 @@ export const getAllDataPlans: RequestHandler = async (req, res) => {
         url: `https://strowallet.com/api/buydata/plans/`,
         params: {
             public_key: PUBLIC_KEY,
-            service_name: service_name
+            service_name: service_name as string, // Type assertion to string
         },
         headers: {
             'Content-Type': 'application/json'
@@ -34,9 +33,11 @@ export const getAllDataPlans: RequestHandler = async (req, res) => {
     }
 };
 
+
 export const purchaseData: RequestHandler = async (req, res) => {
     const { service_name, amount, phone, variation_code, service_id } = req.body;
-    const userId = req.user.id;
+    // const userId = req.user.id;
+    // console.log(userId)
   
     if (!service_name) {
       return res.status(400).json({ message: "service_name is required" });
@@ -59,20 +60,20 @@ export const purchaseData: RequestHandler = async (req, res) => {
     };
   
     try {
-      const wallet = await walletModel.findOne({ userId });
-      if (!wallet) {
-        return sendErrorRes(res, "Unauthorized request: cannot perform this operation", 401);
-      }
+    //   const wallet = await walletModel.findOne({ userId });
+    //   if (!wallet) {
+    //     return sendErrorRes(res, "Unauthorized request: cannot perform this operation", 401);
+    //   }
   
-      if (wallet.balance < amount) {
-        return sendErrorRes(res, "Insufficient balance", 401);
-      }
+    //   if (wallet.balance < amount) {
+    //     return sendErrorRes(res, "Insufficient balance", 401);
+    //   }
   
       const response = await axios(options);
   
       // Assuming response.data contains success information, deduct the amount from the user's balance
-      wallet.balance -= amount;
-      await wallet.save();
+    //   wallet.balance -= amount;
+    //   await wallet.save();
   
       res.json(response.data);
     } catch (error) {
@@ -170,7 +171,7 @@ export const purchaseAirtime: RequestHandler = async (req, res) => {
 };
 
 export const getCableTvPlan: RequestHandler = async (req, res) => {
-    const { service_id } = req.body;
+    const { service_id } = req.query;
 
     if (!service_id) {
         return res.status(400).json({ message: "service_name is required" });
