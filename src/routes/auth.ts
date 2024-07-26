@@ -187,7 +187,6 @@ authRouter.post('/resend-otp', resendOtp)
  *                 description: User's registered email
  *             example:
  *               email: "example@example.com"
- *               password: "1234"
  *     responses:
  *       "200":
  *         description: Verification code sent successfully
