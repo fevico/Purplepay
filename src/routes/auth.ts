@@ -184,7 +184,7 @@ authRouter.post('/resend-otp', resendOtp)
  *             properties:
  *               email:
  *                 type: string
- *                 description: User's registered email
+ *                 description: Users registered email
  *             example:
  *               email: "example@example.com"
  *     responses:
