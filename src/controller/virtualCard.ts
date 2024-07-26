@@ -68,7 +68,7 @@ export const createCustomer: RequestHandler = async (req, res) => {
 }
 
 export const createCard: RequestHandler = async (req, res) => {
-    const { name_on_card, amount, customerEmail } = req.body;
+    const { name_on_card, amount, customerEmail } = req.query;
     const cardType = 'visa'
 
     if (!name_on_card) {
@@ -274,7 +274,7 @@ export const freezeAndUnfreezeCard: RequestHandler = async (req, res) => {
 }
 
 export const cardHistory: RequestHandler = async (req, res) => {
-    const { card_id, page, take} = req.body;
+    const { card_id, page, take} = req.query;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });

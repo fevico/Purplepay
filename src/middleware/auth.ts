@@ -1,6 +1,5 @@
 import { RequestHandler } from "express";
 import { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
-import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import userModel from "src/model/user";
 import { sendErrorRes } from "src/utils/helper";
