@@ -16,7 +16,7 @@ export const createUser: RequestHandler = async (req, res) => {
   const token = generateToken();
   await TokenModel.create({ owner: user._id, token });
   sendVerificationToken(email, token);
-  return res.status(200).json({ user });
+  return res.status(200).json({ message: "User created successfully", id: user._id, email: user.email, token });
 };
  
 export const verifyAuthToken: RequestHandler = async (req, res) => {
@@ -54,19 +54,15 @@ export const resendOtp: RequestHandler = async (req, res) => {
   const tokenExist = await TokenModel.findOneAndDelete({ owner: user._id });
   await TokenModel.create({ owner: user._id, token });
   sendVerificationToken(email, token);
-  return res.json({ message: "Verification email sent!" });
+  return res.json({ message: "Verification email sent!", id: user._id, email: user.email, token });
 };
 
 export const updateProfile: RequestHandler = async (req, res) => {
-    const { userId, name, phoneNumber, referralCode, country } = req.body;
+  const userId = req.user.id
+    const { name, phoneNumber, referralCode, country } = req.body;
     const user = await userModel.findByIdAndUpdate(userId, { name, phoneNumber, referralCode, country});
     if (!user) return sendErrorRes(res, "User not found!", 404);
-    // if (name) user.name = name;
-    // if (phoneNumber) user.phoneNumber = phoneNumber;
-    // if (password) user.password = password;
-    // if (referralCode) user.password = referralCode;
-    // if (country) user.password = country;
-    await user.save();
+      await user.save();
     return res.json({ user: {name, phoneNumber, country} });
 }
 

@@ -8,7 +8,7 @@ const authRouter = Router()
 
 authRouter.post('/create', validate(userSchema), createUser)
 authRouter.post('/verify-auth-token', verifyAuthToken)
-authRouter.put('/update-profile', updateProfile)
+authRouter.put('/update-profile', isAuth, updateProfile)
 authRouter.post('/login', login)
 authRouter.post('/set-transaction-pin', isAuth, setTransactionPin)
 authRouter.post('/verify-transaction-pin', isAuth, verifyTransactionPin)
