@@ -9,6 +9,7 @@
     "start": "node ./dist",
     "mock-server": "node mock-server.js",
     "hosted-server": "node server.js",
+    "prod-server": "node prod-server.js",
     "test-server": "node test-endpoints-server.js",
     "test": "node setup-test-environment.js"
   },

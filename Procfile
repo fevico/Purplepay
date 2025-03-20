@@ -1,1 +1,1 @@
-web: npm run hosted-server
+web: npm run prod-server

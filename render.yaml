@@ -2,8 +2,10 @@ services:
   - type: web
     name: purplepay-backend
     env: node
-    buildCommand: npm install
-    startCommand: npm run hosted-server
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
     envVars:
       - key: PORT
         value: 10000
+      - key: NODE_ENV
+        value: production
