@@ -6,12 +6,22 @@
   "scripts": {
     "dev": "tsnd --respawn -r tsconfig-paths/register --transpile-only ./src/index.ts",
     "build": "tsc && tsc-alias",
-    "start": "node ./dist"
+    "start": "node ./dist",
+    "mock-server": "node mock-server.js",
+    "hosted-server": "node server.js",
+    "test-server": "node test-endpoints-server.js",
+    "test": "node setup-test-environment.js"
   },
   "author": "Favour",
   "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
+    "@prelude.so/sdk": "^0.2.0",
     "@types/bcrypt": "^5.0.2",
+    "@types/node-cron": "^3.0.11",
+    "@types/qrcode": "^1.5.5",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.6",
     "axios": "^1.7.2",
@@ -20,16 +30,25 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "mailtrap": "^3.3.0",
     "mongoose": "^8.4.0",
+    "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13",
+    "qrcode": "^1.5.4",
+    "resend": "^4.1.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
+    "twilio": "^4.23.0",
     "typescript": "^5.4.5",
     "uninstall": "^0.0.0",
+    "uuid": "^9.0.1",
+    "xss-clean": "^0.1.4",
     "yup": "^1.4.0"
   },
   "devDependencies": {
@@ -38,6 +57,8 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.12.12",
     "@types/nodemailer": "^6.4.15",
+    "@types/twilio": "^3.19.3",
+    "@types/uuid": "^9.0.8",
     "tsc-alias": "^1.8.10"
   }
 }
