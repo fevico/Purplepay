@@ -1,14 +1,61 @@
 import { Router } from "express";
-import { createWallet, fetchBankList, getAccountDetails, } from "src/controller/wallet";
-import { isAuth } from "src/middleware/auth";
+import { 
+    createWallet, 
+    fetchBankList, 
+    fundWallet, 
+    getAccountDetails, 
+    getWalletDetails, 
+    getWithdrawalStatus, 
+    initiateWithdrawal, 
+    verifyFunding, 
+    verifyWithdrawal,
+    transferFunds,
+    verifyTransfer,
+    getTransferStatus,
+    addFavoriteRecipient,
+    getFavoriteRecipients,
+    updateFavoriteRecipient,
+    deleteFavoriteRecipient,
+    createScheduledTransfer,
+    getScheduledTransfers,
+    updateScheduledTransfer,
+    deleteScheduledTransfer,
+    testFundWallet,
+    testCompleteFunding,
+    testEndpoint
+} from "../controller/wallet";
+import { isAuthenticated } from "../middleware/auth";
 
 const walletRouter = Router()
 
-walletRouter.post('/create', isAuth, createWallet)
-walletRouter.get('/bank-list', isAuth, fetchBankList)
-walletRouter.get('/account-details', isAuth, getAccountDetails)
-// walletRouter.post('/bank-transfer', isAuth, bankTransfer)
+walletRouter.use(isAuthenticated);
 
+walletRouter.post('/create', createWallet)
+walletRouter.get('/bank-list', fetchBankList)
+walletRouter.post('/account-details', getAccountDetails)
+walletRouter.get('/details', getWalletDetails)
+walletRouter.post('/fund', fundWallet)
+walletRouter.get('/verify-funding/:reference', verifyFunding)
+walletRouter.post('/withdraw', initiateWithdrawal)
+walletRouter.post('/verify-withdrawal', verifyWithdrawal)
+walletRouter.get('/withdrawal-status/:reference', getWithdrawalStatus)
+walletRouter.post('/transfer', transferFunds)
+walletRouter.post('/verify-transfer', verifyTransfer)
+walletRouter.get('/transfer-status/:reference', getTransferStatus)
+walletRouter.post('/favorite-recipients', addFavoriteRecipient)
+walletRouter.get('/favorite-recipients', getFavoriteRecipients)
+walletRouter.put('/favorite-recipients/:id', updateFavoriteRecipient)
+walletRouter.delete('/favorite-recipients/:id', deleteFavoriteRecipient)
+
+walletRouter.post('/scheduled-transfers', createScheduledTransfer)
+walletRouter.get('/scheduled-transfers', getScheduledTransfers)
+walletRouter.put('/scheduled-transfers/:id', updateScheduledTransfer)
+walletRouter.delete('/scheduled-transfers/:id', deleteScheduledTransfer)
+
+walletRouter.post('/test-endpoint', testEndpoint)
+// Test endpoints for wallet funding (only for development/testing)
+walletRouter.post("/test-fund", testFundWallet);
+walletRouter.post("/test-complete-funding", testCompleteFunding);
 
 /**
  * @swagger
@@ -266,7 +313,7 @@ walletRouter.get('/account-details', isAuth, getAccountDetails)
 // /**
 //  * @swagger
 //  * /wallet/account-details:
-//  *   get:
+//  *   post:
 //  *     summary: Verify account details
 //  *     tags:
 //  *       - wallet

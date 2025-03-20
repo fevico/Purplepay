@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
 import { Request } from 'express';
-import utilityModel from "src/model/utility";
-import walletModel from "src/model/wallet";
-import { sendErrorRes } from "src/utils/helper";
+import utilityModel from "../model/utility";
+import walletModel from "../model/wallet";
+import { sendErrorRes } from "../utils/helper";
 
 declare module 'express-serve-static-core' {
   interface Request {

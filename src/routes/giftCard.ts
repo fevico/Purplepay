@@ -1,9 +1,25 @@
 import { Router } from "express";
-import { getCountries, getProductByISOCode, getProductById, getProducts, RedeemInstruction, redeemInstructionByBrandId, getFxRate, getDiscount, getDiscountByProductId, orderGiftCard, getTransactions, getTransactionsById } from "src/controller/giftCard";
-import { acessToken } from "src/controller/utilityBills";
-import { isAuth } from "src/middleware/auth";
+import { 
+    getCountries, 
+    getProducts, 
+    getProductById, 
+    getProductByISOCode, 
+    RedeemInstruction, 
+    redeemInstructionByBrandId, 
+    getFxRate, 
+    getDiscount, 
+    getDiscountByProductId, 
+    orderGiftCard, 
+    getTransactions, 
+    getTransactionsById 
+} from "../controller/giftCard";
+import { acessToken } from "../controller/utilityBills";
+import { isAuthenticated } from "../middleware/auth";
 
 const giftCardRouter = Router()
+
+// Apply authentication middleware
+giftCardRouter.use(isAuthenticated);
 
 giftCardRouter.get('/get-countries', acessToken, getCountries)
 giftCardRouter.get('/get-products', acessToken, getProducts) 
@@ -14,10 +30,9 @@ giftCardRouter.get('/redeem-instructions-by-id/:brandId', acessToken, redeemInst
 giftCardRouter.get('/fx-rate', acessToken, getFxRate)
 giftCardRouter.get('/get-discount', acessToken, getDiscount)
 giftCardRouter.get('/discount-by-id/:productId', acessToken, getDiscountByProductId)
-giftCardRouter.post('/order-gift-card', isAuth, orderGiftCard)
+giftCardRouter.post('/order-gift-card', orderGiftCard)
 giftCardRouter.get('/get-transactions', acessToken, getTransactions)
 giftCardRouter.get('/transactions-by-id/:transactionId', acessToken, getTransactionsById)
-
 
 /**
  * @swagger

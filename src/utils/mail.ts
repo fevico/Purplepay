@@ -31,7 +31,7 @@ export const sendVerificationToken = async(email: string, token: string)=>{
   const VERIFICATION_EMAIL = process.env.VERIFICATION_EMAIL as string;
 
   const sender = {
-    email: VERIFICATION_EMAIL,
+    email: VERIFICATION_EMAIL || "onboarding@email.propease.ca",
     name: "Purplepay",
   };
   const recipients = [
@@ -58,7 +58,7 @@ export const ForgetPasswordToken = async(email: string, token: string, name: str
   const VERIFICATION_EMAIL = process.env.VERIFICATION_EMAIL as string;
 
   const sender = {
-    email: VERIFICATION_EMAIL,
+    email: VERIFICATION_EMAIL || "onboarding@email.propease.ca",
     name: "Purplepay",
   };
   const recipients = [
@@ -75,7 +75,7 @@ export const ForgetPasswordToken = async(email: string, token: string, name: str
     template_uuid: "f6d872d6-1c12-46c1-a115-54929ef4572f",
     template_variables: {
       "user_name": name,
-      "pass_reset_token": token,
+      "otp": token,
     }
   })
 

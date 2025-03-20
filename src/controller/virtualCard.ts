@@ -1,5 +1,7 @@
 import { RequestHandler } from "express";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
+import strollwalletClient from "../services/strollwallet";
+import { logger } from "../utils/logger";
 
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
@@ -9,353 +11,438 @@ export const createCustomer: RequestHandler = async (req, res) => {
     if (!firstName) {
         return res.status(400).json({ message: "firstName is required" });
     }
+    
+    if (!lastName) {
+        return res.status(400).json({ message: "lastName is required" });
+    }
+    
+    if (!customerEmail) {
+        return res.status(400).json({ message: "customerEmail is required" });
+    }
+    
+    if (!phoneNumber) {
+        return res.status(400).json({ message: "phoneNumber is required" });
+    }
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
  
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/create-user/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            firstName: firstName,
-            houseNumber: houseNumber,
-            lastName: lastName,
-            idNumber: idNumber,
-            customerEmail: customerEmail,
-            phoneNumber: phoneNumber,
-            dateOfBirth: dateOfBirth,
-            idImage: idImage,
-            userPhoto: userPhoto,
-            line1: line1,
-            state: "Accra",
-            zipCode: zipCode,
-            city: "Accra",
-            country: "Ghana",
-            idType: "PASSPORT",
-
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-    // "success": true,
-//     "message": "successfully registered user",
-//     "response": {
-//         "customerEmail": "ajayivictor291@gmail.com",
-//         "firstName": "Victor",
-//         "lastName": "Ajayi",
-//         "phoneNumber": "08136819208",
-//         "city": "Accra",
-//         "state": "Accra",
-//         "country": "Ghana",
-//         "line1": "lagos nigeria",
-//         "zipCode": "260101",
-//         "houseNumber": "ayokomi",
-//         "idNumber": "34567822",
-//         "idType": "PASSPORT",
-//         "idImage": "https://www.google.com/url?sa=i",
-//         "userPhoto": "https://www.google.com/url?sa=i",
-//         "dateOfBirth": "2000-02-24",
-//         "bitvcard_customer_id": "c501afdb-a937-46a6-a76a-458ebcd679a0",
-//         "card_brand": "visa"
-//     }
-// }
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Creating customer', { 
+            userId: req.user?.id,
+            customerEmail
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.createCustomer({
+            firstName,
+            lastName,
+            customerEmail,
+            phoneNumber,
+            dateOfBirth,
+            idImage,
+            userPhoto,
+            line1,
+            state,
+            zipCode,
+            city,
+            country,
+            idType,
+            houseNumber,
+            idNumber
+        });
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error creating customer', { 
+            userId: req.user?.id,
+            customerEmail,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error creating customer" });
+        }
+        
+        return res.status(500).json({ message: "Error creating customer" });
     }
 }
 
 export const createCard: RequestHandler = async (req, res) => {
-    const { name_on_card, amount, customerEmail } = req.query;
-    const cardType = 'visa'
+    const { name_on_card, amount, customerEmail } = req.body;
 
     if (!name_on_card) {
         return res.status(400).json({ message: "name_on_card is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/create-card/`,
-        params: {
-            public_key: PUBLIC_KEY, 
-            name_on_card: name_on_card,
-            card_type: cardType,
-            amount: amount,
-            customerEmail: customerEmail,
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-    // {
-    //     "success": true,
-    //     "message": "Card creation in progress",
-    //     "response": {
-    //       "name_on_card": "Ajayi Victor",
-    //       "card_id": 6001119434,
-    //       "card_created_date": "2024-05-29",
-    //       "card_type": "virtual",
-    //       "card_brand": "visa",
-    //       "card_user_id": "12d4-9290113c29e2",
-    //       "reference": 43209,
-    //       "card_status": "pending",
-    //       "customer_id": "4070fc3e-1d76-46"
-    //     }
-    //   }
+    
+    if (!amount) {
+        return res.status(400).json({ message: "amount is required" });
+    }
+    
+    if (!customerEmail) {
+        return res.status(400).json({ message: "customerEmail is required" });
+    }
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
 
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Creating card', { 
+            userId: req.user?.id,
+            customerEmail,
+            amount
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.createCard({
+            name_on_card,
+            amount,
+            customerEmail
+        });
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error creating card', { 
+            userId: req.user?.id,
+            customerEmail,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error creating card" });
+        }
+        
+        return res.status(500).json({ message: "Error creating card" });
     }
 }
 
 export const fundCard: RequestHandler = async (req, res) => {
-    const { card_id, amount} = req.body;
+    const { card_id, amount } = req.body;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/fund-card/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            card_id: card_id,
-            amount: amount,
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-    // {
-    //     "success": true,
-    //     "message": "Done successfully",
-    //     "apiresponse": {
-    //       "status": true,
-    //       "message": "card topup in progress",
-    //       "data": {
-    //         "id": "db4ed907-2b6a-469a-8732-86d0e1d26ca4",
-    //         "createdAt": "2024-03-06T18:08:35.886Z",
-    //         "updatedAt": "2024-03-06T18:08:35.886Z",
-    //         "type": "credit",
-    //         "method": "topup",
-    //         "cardId": "d7baacc7-c349-427e-b922-9160fcf9fcc0",
-    //         "currency": "usd",
-    //         "centAmount": 200,
-    //         "narrative": "Top-up card",
-    //         "status": "pending",
-    //         "reference": "7F1U53SD5F59",
-    //         "amount": 2
-    //       }
-    //     }
-    //   }
-
+    
+    if (!amount) {
+        return res.status(400).json({ message: "amount is required" });
+    }
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Funding card', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            amount
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.fundCard({
+            card_id,
+            amount
+        });
+        
+        // Store funding data for middleware
+        res.locals.fundingData = {
+            cardId: card_id,
+            amount,
+            currency: "NGN",
+            reference: `FUND-${Date.now()}`
+        };
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error funding card', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error funding card" });
+        }
+        
+        return res.status(500).json({ message: "Error funding card" });
     }
 }
 
-
 export const cardDetails: RequestHandler = async (req, res) => {
-    const { card_id} = req.body;
+    const { card_id } = req.body;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/fetch-card-detail/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            card_id: card_id,
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-    // {
-    //     "success": true,
-    //     "message": "Done successfully",
-    //     "apiresponse": {
-    //       "status": true,
-    //       "message": "card topup in progress",
-    //       "data": {
-    //         "id": "db4ed907-2b6a-469a-8732-86d0e1d26ca4",
-    //         "createdAt": "2024-03-06T18:08:35.886Z",
-    //         "updatedAt": "2024-03-06T18:08:35.886Z",
-    //         "type": "credit",
-    //         "method": "topup",
-    //         "cardId": "d7baacc7-c349-427e-b922-9160fcf9fcc0",
-    //         "currency": "usd",
-    //         "centAmount": 200,
-    //         "narrative": "Top-up card",
-    //         "status": "pending",
-    //         "reference": "7F1U53SD5F59",
-    //         "amount": 2
-    //       }
-    //     }
-    //   }
-
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Getting card details', { 
+            userId: req.user?.id,
+            cardId: card_id
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.cardDetails({
+            card_id
+        });
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error getting card details', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error getting card details" });
+        }
+        
+        return res.status(500).json({ message: "Error getting card details" });
     }
 }
 
 export const cardTransactions: RequestHandler = async (req, res) => {
-    const { card_id} = req.body;
+    const { card_id } = req.body;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/card-transactions/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            card_id: card_id,
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Getting card transactions', { 
+            userId: req.user?.id,
+            cardId: card_id
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.cardTransactions({
+            card_id
+        });
+        
+        // Store transaction data for middleware if there are transactions
+        if (response.response && Array.isArray(response.response.transactions) && response.response.transactions.length > 0) {
+            // Process each transaction for rewards
+            response.response.transactions.forEach((transaction: any) => {
+                if (transaction.status === "completed" && !transaction.processed_for_rewards) {
+                    res.locals.cardTransaction = {
+                        cardId: card_id,
+                        amount: transaction.amount,
+                        currency: transaction.currency,
+                        reference: transaction.reference,
+                        description: transaction.description,
+                        merchantName: transaction.merchant_name
+                    };
+                    
+                    // Mark as processed to avoid duplicate rewards
+                    transaction.processed_for_rewards = true;
+                }
+            });
+        }
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error getting card transactions', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error getting card transactions" });
+        }
+        
+        return res.status(500).json({ message: "Error getting card transactions" });
     }
 }
 
 export const freezeAndUnfreezeCard: RequestHandler = async (req, res) => {
-    const { card_id, action} = req.body;
+    const { card_id, status } = req.body;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/action/status/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            card_id: card_id,
-            action: action
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
-    try {
-        const response = await axios(options);
-        res.json(response.data);
-    } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+    
+    if (!status || !['freeze', 'unfreeze'].includes(status)) {
+        return res.status(400).json({ message: "status is required and must be 'freeze' or 'unfreeze'" });
     }
-}
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
+    try {
+        // Log the request
+        logger.info(`${status === 'freeze' ? 'Freezing' : 'Unfreezing'} card`, { 
+            userId: req.user?.id,
+            cardId: card_id,
+            status
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.freezeUnfreezeCard({
+            card_id,
+            status: status as 'freeze' | 'unfreeze'
+        });
+        
+        return res.status(200).json(response);
+    } catch (error) {
+        logger.error(`Error ${status === 'freeze' ? 'freezing' : 'unfreezing'} card`, { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: `Error ${status === 'freeze' ? 'freezing' : 'unfreezing'} card` });
+        }
+        
+        return res.status(500).json({ message: `Error ${status === 'freeze' ? 'freezing' : 'unfreezing'} card` });
+    }
+};
 
 export const cardHistory: RequestHandler = async (req, res) => {
-    const { card_id, page, take} = req.query;
+    const { card_id } = req.query;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'GET',
-        url: `https://strowallet.com/api/apicard-transactions/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            page: 1,
-            take: 10
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Getting card history', { 
+            userId: req.user?.id,
+            cardId: card_id
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.cardHistory({
+            card_id: card_id as string
+        });
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error getting card history', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error getting card history" });
+        }
+        
+        return res.status(500).json({ message: "Error getting card history" });
     }
 }
 
-
 export const withdrawFromCard: RequestHandler = async (req, res) => {
-    const { card_id, amount} = req.body;
+    const { card_id, amount } = req.body;
 
     if (!card_id) {
         return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/card_withdraw/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            card_id: card_id,
-            amount: amount
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
+    
+    if (!amount) {
+        return res.status(400).json({ message: "amount is required" });
+    }
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Withdrawing from card', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            amount
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.withdrawFromCard({
+            card_id,
+            amount
+        });
+        
+        // Store withdrawal data for middleware
+        res.locals.withdrawalData = {
+            cardId: card_id,
+            amount,
+            currency: "NGN",
+            reference: `WDRW-${Date.now()}`
+        };
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error withdrawing from card', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error withdrawing from card" });
+        }
+        
+        return res.status(500).json({ message: "Error withdrawing from card" });
     }
 }
 
 export const cardStatus: RequestHandler = async (req, res) => {
-    const { reference} = req.body;
+    const { card_id } = req.body;
 
-    if (!reference) {
-        return res.status(400).json({ message: "reference is required" });
+    if (!card_id) {
+        return res.status(400).json({ message: "card_id is required" });
     }
-
-    const options = {
-        method: 'POST',
-        url: `https://strowallet.com/api/bitvcard/card_withdraw/`,
-        params: {
-            public_key: PUBLIC_KEY,
-            reference: reference
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
+    
+    if (!PUBLIC_KEY) {
+        return res.status(500).json({ message: "StrollWallet API key not configured" });
+    }
+    
     try {
-        const response = await axios(options);
-        res.json(response.data);
+        // Log the request
+        logger.info('Getting card status', { 
+            userId: req.user?.id,
+            cardId: card_id
+        });
+        
+        // Call StrollWallet API client
+        const response = await strollwalletClient.cardStatus({
+            card_id
+        });
+        
+        return res.status(200).json(response);
     } catch (error) {
-        console.error('Error fetching data plans:', error);
-        res.status(500).json({ message: "Error fetching data plans" });
+        logger.error('Error getting card status', { 
+            userId: req.user?.id,
+            cardId: card_id,
+            error: error instanceof AxiosError ? error.response?.data : error
+        });
+        
+        if (error instanceof AxiosError) {
+            return res.status(error.response?.status || 500).json(error.response?.data || { message: "Error getting card status" });
+        }
+        
+        return res.status(500).json({ message: "Error getting card status" });
     }
 }

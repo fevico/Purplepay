@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import giftCardModel from "src/model/giftCard";
+import giftCardModel from "../model/giftCard";
 
 function generateRandomAlphaNumeric(length: any) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

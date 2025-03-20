@@ -1,7 +1,21 @@
 import { Router } from "express";
-import { cardDetails, cardHistory, cardTransactions, createCard, createCustomer, freezeAndUnfreezeCard, fundCard, withdrawFromCard } from "src/controller/virtualCard";
+import { 
+    createCustomer, 
+    createCard, 
+    fundCard, 
+    cardDetails, 
+    cardTransactions, 
+    freezeAndUnfreezeCard, 
+    cardHistory, 
+    withdrawFromCard,
+    cardStatus 
+} from "../controller/virtualCard";
+import { isAuthenticated } from "../middleware/auth";
 
 const virtualCardRouter = Router()
+
+// Apply authentication middleware to all routes
+virtualCardRouter.use(isAuthenticated);
 
 virtualCardRouter.post('/create-customer', createCustomer)
 virtualCardRouter.post('/create-card', createCard) 
@@ -11,6 +25,7 @@ virtualCardRouter.post('/card-transactions', cardTransactions)
 virtualCardRouter.post('/freeze-unfreze-card', freezeAndUnfreezeCard)
 virtualCardRouter.get('/card-history', cardHistory)
 virtualCardRouter.post('/withdraw-from-card', withdrawFromCard)
+virtualCardRouter.post('/card-status', cardStatus)
 
 /**
  * @swagger

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurplePay API Tester</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #6200ee;
+      text-align: center;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #6200ee;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #5000d6;
+    }
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .tab.active {
+      border-bottom: 2px solid #6200ee;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>PurplePay API Tester</h1>
+  
+  <div class="tabs">
+    <div class="tab active" data-tab="register">Register</div>
+    <div class="tab" data-tab="verify">Verify Email</div>
+    <div class="tab" data-tab="pin">Set PIN</div>
+    <div class="tab" data-tab="bvn">BVN Verification</div>
+    <div class="tab" data-tab="username">Username</div>
+    <div class="tab" data-tab="tags">Tags</div>
+    <div class="tab" data-tab="status">Status</div>
+  </div>
+  
+  <div id="register" class="tab-content active card">
+    <h2>Register a New User</h2>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <label for="name">Name (optional)</label>
+      <input type="text" id="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number (optional)</label>
+      <input type="text" id="phoneNumber" placeholder="Enter phone number">
+    </div>
+    <button onclick="register()">Register</button>
+    <div id="registerResult" class="result"></div>
+  </div>
+  
+  <div id="verify" class="tab-content card">
+    <h2>Verify Email</h2>
+    <div class="form-group">
+      <label for="userId">User ID</label>
+      <input type="text" id="userId" placeholder="Enter user ID">
+    </div>
+    <div class="form-group">
+      <label for="token">Verification Token</label>
+      <input type="text" id="token" placeholder="Enter verification token">
+    </div>
+    <button onclick="verifyEmail()">Verify Email</button>
+    <div id="verifyResult" class="result"></div>
+  </div>
+  
+  <div id="pin" class="tab-content card">
+    <h2>Set Transaction PIN</h2>
+    <div class="form-group">
+      <label for="pinUserId">User ID</label>
+      <input type="text" id="pinUserId" placeholder="Enter user ID">
+    </div>
+    <div class="form-group">
+      <label for="pin">PIN (4 digits)</label>
+      <input type="text" id="pin" placeholder="Enter 4-digit PIN" maxlength="4" pattern="[0-9]{4}">
+    </div>
+    <button onclick="setPin()">Set PIN</button>
+    <div id="pinResult" class="result"></div>
+  </div>
+  
+  <div id="bvn" class="tab-content card">
+    <h2>BVN Verification</h2>
+    <div class="form-group">
+      <label for="bvnUserId">User ID</label>
+      <input type="text" id="bvnUserId" placeholder="Enter user ID">
+    </div>
+    <div class="form-group">
+      <label for="bvnNumber">BVN</label>
+      <input type="text" id="bvnNumber" placeholder="Enter BVN" maxlength="11">
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob">
+    </div>
+    <div class="form-group">
+      <label for="bvnPhone">Phone Number</label>
+      <input type="text" id="bvnPhone" placeholder="Enter phone number">
+    </div>
+    <button onclick="verifyBvn()">Verify BVN</button>
+    <div id="bvnResult" class="result"></div>
+    
+    <h3>Confirm OTP</h3>
+    <div class="form-group">
+      <label for="verificationId">Verification ID</label>
+      <input type="text" id="verificationId" placeholder="Enter verification ID">
+    </div>
+    <div class="form-group">
+      <label for="otp">OTP</label>
+      <input type="text" id="otp" placeholder="Enter OTP">
+    </div>
+    <button onclick="confirmBvn()">Confirm BVN</button>
+    <div id="confirmResult" class="result"></div>
+  </div>
+  
+  <div id="username" class="tab-content card">
+    <h2>Username Tag</h2>
+    <div class="form-group">
+      <label for="usernameUserId">User ID</label>
+      <input type="text" id="usernameUserId" placeholder="Enter user ID">
+    </div>
+    <div class="form-group">
+      <label for="usernameTag">Username</label>
+      <input type="text" id="usernameTag" placeholder="Enter username">
+    </div>
+    <button onclick="checkUsername()">Check Availability</button>
+    <button onclick="setUsername()">Set Username</button>
+    <div id="usernameResult" class="result"></div>
+  </div>
+  
+  <div id="tags" class="tab-content card">
+    <h2>Interest Tags</h2>
+    <div class="form-group">
+      <label for="tagsUserId">User ID</label>
+      <input type="text" id="tagsUserId" placeholder="Enter user ID">
+    </div>
+    <button onclick="getTags()">Get Available Tags</button>
+    <div id="tagsResult" class="result"></div>
+    
+    <h3>Select Tags</h3>
+    <div class="form-group">
+      <label for="selectedTags">Selected Tag IDs (comma separated)</label>
+      <input type="text" id="selectedTags" placeholder="e.g., 1,2,3">
+    </div>
+    <button onclick="selectTags()">Select Tags</button>
+    <div id="selectResult" class="result"></div>
+  </div>
+  
+  <div id="status" class="tab-content card">
+    <h2>Onboarding Status</h2>
+    <div class="form-group">
+      <label for="statusUserId">User ID</label>
+      <input type="text" id="statusUserId" placeholder="Enter user ID">
+    </div>
+    <button onclick="getStatus()">Get Status</button>
+    <div id="statusResult" class="result"></div>
+  </div>
+
+  <script>
+    // Tab functionality
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+    
+    // API functions
+    const API_URL = window.location.origin;
+    
+    async function makeRequest(url, method, data = null, headers = {}) {
+      try {
+        const options = {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            ...headers
+          }
+        };
+        
+        if (data) {
+          options.body = JSON.stringify(data);
+        }
+        
+        const response = await fetch(url, options);
+        const result = await response.json();
+        
+        return { success: response.ok, data: result };
+      } catch (error) {
+        return { success: false, data: { message: error.message } };
+      }
+    }
+    
+    async function register() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const name = document.getElementById('name').value;
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      
+      const data = { email, password };
+      if (name) data.name = name;
+      if (phoneNumber) data.phoneNumber = phoneNumber;
+      
+      const result = await makeRequest(`${API_URL}/auth/register`, 'POST', data);
+      
+      document.getElementById('registerResult').textContent = JSON.stringify(result.data, null, 2);
+      
+      if (result.success) {
+        // Auto-fill user ID in other tabs
+        document.getElementById('userId').value = result.data.id;
+        document.getElementById('token').value = result.data.token;
+        document.getElementById('pinUserId').value = result.data.id;
+        document.getElementById('bvnUserId').value = result.data.id;
+        document.getElementById('usernameUserId').value = result.data.id;
+        document.getElementById('tagsUserId').value = result.data.id;
+        document.getElementById('statusUserId').value = result.data.id;
+      }
+    }
+    
+    async function verifyEmail() {
+      const userId = document.getElementById('userId').value;
+      const token = document.getElementById('token').value;
+      
+      const result = await makeRequest(`${API_URL}/auth/verify?userId=${userId}&token=${token}`, 'GET');
+      
+      document.getElementById('verifyResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function setPin() {
+      const userId = document.getElementById('pinUserId').value;
+      const pin = document.getElementById('pin').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/security/set-transaction-pin`, 
+        'POST', 
+        { pin },
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('pinResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function verifyBvn() {
+      const userId = document.getElementById('bvnUserId').value;
+      const bvn = document.getElementById('bvnNumber').value;
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const dateOfBirth = document.getElementById('dob').value;
+      const phoneNumber = document.getElementById('bvnPhone').value;
+      
+      const data = { bvn, firstName, lastName };
+      if (dateOfBirth) data.dateOfBirth = dateOfBirth;
+      if (phoneNumber) data.phoneNumber = phoneNumber;
+      
+      const result = await makeRequest(
+        `${API_URL}/bvn/verify`, 
+        'POST', 
+        data,
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('bvnResult').textContent = JSON.stringify(result.data, null, 2);
+      
+      if (result.success && result.data.verificationId) {
+        document.getElementById('verificationId').value = result.data.verificationId;
+        document.getElementById('otp').value = result.data.verificationCode || '';
+      }
+    }
+    
+    async function confirmBvn() {
+      const userId = document.getElementById('bvnUserId').value;
+      const verificationId = document.getElementById('verificationId').value;
+      const otp = document.getElementById('otp').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/bvn/confirm-otp`, 
+        'POST', 
+        { verificationId, otp },
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('confirmResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function checkUsername() {
+      const userId = document.getElementById('usernameUserId').value;
+      const username = document.getElementById('usernameTag').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/tag/check-availability/${username}`, 
+        'GET',
+        null,
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('usernameResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function setUsername() {
+      const userId = document.getElementById('usernameUserId').value;
+      const username = document.getElementById('usernameTag').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/tag/set-username`, 
+        'POST', 
+        { username },
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('usernameResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function getTags() {
+      const userId = document.getElementById('tagsUserId').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/tag/available-tags`, 
+        'GET',
+        null,
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('tagsResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function selectTags() {
+      const userId = document.getElementById('tagsUserId').value;
+      const tagIdsString = document.getElementById('selectedTags').value;
+      const tagIds = tagIdsString.split(',').map(id => id.trim());
+      
+      const result = await makeRequest(
+        `${API_URL}/tag/select-tags`, 
+        'POST', 
+        { tagIds },
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('selectResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+    
+    async function getStatus() {
+      const userId = document.getElementById('statusUserId').value;
+      
+      const result = await makeRequest(
+        `${API_URL}/auth/onboarding-status`, 
+        'GET',
+        null,
+        { 'user-id': userId }
+      );
+      
+      document.getElementById('statusResult').textContent = JSON.stringify(result.data, null, 2);
+    }
+  </script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
 import { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
 import jwt from "jsonwebtoken";
-import userModel from "src/model/user";
-import { sendErrorRes } from "src/utils/helper";
+import userModel from "../model/user";
+import { sendErrorRes } from "../utils/helper";
 
 // Define the user profile interface for the request object
 interface UserProfile {
@@ -54,3 +54,15 @@ export const isAuth: RequestHandler = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ * Middleware to check if a user is authenticated
+ * This is an alias for isAuth to maintain consistent naming across the codebase
+ */
+export const isAuthenticated: RequestHandler = isAuth;
+
+/**
+ * Middleware to check if a user is authenticated
+ * This is another alias for isAuth to maintain consistent naming across the codebase
+ */
+export const authenticateToken: RequestHandler = isAuth;

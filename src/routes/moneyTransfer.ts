@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAccountName, getListOfBank, moneyTransfer } from "src/controller/moneyTransfer";
+import { getAccountName, getListOfBank, moneyTransfer } from "../controller/moneyTransfer";
 
 const moneyTransferRouter = Router()
 

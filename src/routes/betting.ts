@@ -1,11 +1,18 @@
 import { Router } from "express";
-import { bettingTopUp, getBettingProvider, validateCustormerId } from "src/controller/betting";
-import { isAuth } from "src/middleware/auth";
+import { 
+    getBettingProvider, 
+    validateCustormerId, 
+    bettingTopUp 
+} from "../controller/betting";
+import { isAuthenticated } from "../middleware/auth";
 
 const bettingRouter = Router()
 
-bettingRouter.get("/betting-providers", isAuth, getBettingProvider)
-bettingRouter.post("/validate-customerId", isAuth, validateCustormerId)
-bettingRouter.post("/top-up", isAuth, bettingTopUp)
+// Apply authentication middleware
+bettingRouter.use(isAuthenticated);
+
+bettingRouter.get("/betting-providers", getBettingProvider)
+bettingRouter.post("/validate-customerId", validateCustormerId)
+bettingRouter.post("/top-up", bettingTopUp)
 
 export default bettingRouter;

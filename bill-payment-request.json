@@ -1,0 +1,11 @@
+{
+  "billType": "water",
+  "provider": "LAGOS_WATER",
+  "customerReference": "WTR12345678",
+  "amount": 2500,
+  "currency": "NGN",
+  "metadata": {
+    "service_id": "lagos_water",
+    "variation_code": "standard"
+  }
+}

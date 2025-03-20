@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createUser, login, resendOtp, resetPassword, sendForgetPasswordToken, setTransactionPin, updateProfile, verifyAuthToken, verifyForgetPasswordToken, verifyTransactionPin } from "src/controller/auth";
-import { isAuth } from "src/middleware/auth";
-import validate from "src/middleware/validator";
-import { userSchema } from "src/utils/validationschema";
+import { createUser, login, resendOtp, resetPassword, sendForgetPasswordToken, setTransactionPin, updateProfile, verifyAuthToken, verifyForgetPasswordToken, verifyTransactionPin } from "../controller/auth";
+import { isAuth } from "../middleware/auth";
+import validate from "../middleware/validator";
+import { userSchema } from "../utils/validationschema";
 
 const authRouter = Router()
 

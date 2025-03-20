@@ -1,0 +1,77 @@
+{
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "Customer Creation",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.224Z",
+      "response": "{\"success\":true,\"message\":\"successfully registered user\",\"response\":{\"public_key\":\"HACMTSR37NBTFSS1Z1WFAS98CX8FK4\",\"firstName\":\"John\",\"lastName\":\"Doe\",\"customerEmail\":\"customer-test-1742385991109@example.com\",\"phoneNumber\":\"08012345678\",\"dateOfBirth\":\"1990-01-01\",\"idImage\":\"https://example.com/id-image.jpg\",\"userPhoto\":\"https://example.com/user-photo.jpg\",\"line1\":\"123 Test Street\",\"state\":\"Accra\",\"zipCode\":\"00233\",\"city\":\"Accra\",\"country\":\"Ghana\",\"idType\":\"PASSPORT\",\"houseNumber\":\"123\",\"idNumber\":\"PASS-test-1742385991109\",\"customerId\":\"ft1lkfj7bm4g3k97l1anu\",\"createdAt\":\"2025-03-19T12:06:31.202Z\"}}",
+      "error": null
+    },
+    {
+      "name": "Card Creation",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.266Z",
+      "response": "{\"success\":true,\"message\":\"Card created successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"last_four\":\"2930\",\"expiry_month\":\"01\",\"expiry_year\":\"28\",\"cvv\":\"472\",\"name_on_card\":\"John Doe\",\"amount\":5000,\"status\":\"active\"}}",
+      "error": null
+    },
+    {
+      "name": "Fund Card",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.290Z",
+      "response": "{\"success\":true,\"message\":\"Card funded successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"amount\":15000,\"status\":\"active\"}}",
+      "error": null
+    },
+    {
+      "name": "Card Details",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.311Z",
+      "response": "{\"success\":true,\"message\":\"Card details retrieved successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"last_four\":\"2930\",\"expiry_month\":\"01\",\"expiry_year\":\"28\",\"cvv\":\"472\",\"name_on_card\":\"John Doe\",\"amount\":15000,\"status\":\"active\"}}",
+      "error": null
+    },
+    {
+      "name": "Card Transactions",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.329Z",
+      "response": "{\"success\":true,\"message\":\"Transactions retrieved successfully\",\"response\":[{\"id\":\"4xghnnyqtmr7iz97469v3h\",\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"amount\":1000,\"type\":\"funding\",\"status\":\"successful\",\"date\":\"2025-03-18T12:06:31.324Z\"},{\"id\":\"q7umdzc77kipy6hczna9rd\",\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"amount\":500,\"type\":\"purchase\",\"merchant\":\"Amazon\",\"status\":\"successful\",\"date\":\"2025-03-19T00:06:31.324Z\"}]}",
+      "error": null
+    },
+    {
+      "name": "Freeze Card",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.352Z",
+      "response": "{\"success\":true,\"message\":\"Card frozen successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"status\":\"frozen\"}}",
+      "error": null
+    },
+    {
+      "name": "Unfreeze Card",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.371Z",
+      "response": "{\"success\":true,\"message\":\"Card unfrozen successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"status\":\"active\"}}",
+      "error": null
+    },
+    {
+      "name": "Card History",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.393Z",
+      "response": "{\"success\":true,\"message\":\"Card history retrieved successfully\",\"response\":[{\"id\":\"7k62oh56kos5jj9zzjrunc\",\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"action\":\"created\",\"status\":\"active\",\"date\":\"2025-03-16T12:06:31.388Z\"},{\"id\":\"9jcijlvgka9i3uo7izltwj\",\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"action\":\"funded\",\"amount\":5000,\"status\":\"active\",\"date\":\"2025-03-17T12:06:31.388Z\"},{\"id\":\"67ywrpmfc5wotbstp2r3v\",\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"action\":\"purchase\",\"amount\":1500,\"merchant\":\"Netflix\",\"status\":\"active\",\"date\":\"2025-03-18T12:06:31.388Z\"}]}",
+      "error": null
+    },
+    {
+      "name": "Withdraw from Card",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.412Z",
+      "response": "{\"success\":true,\"message\":\"Withdrawal successful\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"amount\":14000,\"withdrawn\":1000}}",
+      "error": null
+    },
+    {
+      "name": "Card Status",
+      "passed": true,
+      "timestamp": "2025-03-19T12:06:31.435Z",
+      "response": "{\"success\":true,\"message\":\"Card status retrieved successfully\",\"response\":{\"card_id\":\"6mz3ytzkb99f1p8ahaeiyn\",\"status\":\"active\",\"last_updated\":\"2025-03-19T12:06:31.429Z\"}}",
+      "error": null
+    }
+  ]
+}

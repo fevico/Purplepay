@@ -1,12 +1,18 @@
 import { Router } from "express";
-import { acessToken, getBillers, payBillers } from "src/controller/utilityBills";
-import { isAuth } from "src/middleware/auth";
+import { 
+    acessToken, 
+    getBillers, 
+    payBillers 
+} from "../controller/utilityBills";
+import { isAuthenticated } from "../middleware/auth";
 
 const utilityBillRouter = Router()
 
-// utilityBillRouter.post('/access-token', acessToken)
+// Apply authentication middleware
+utilityBillRouter.use(isAuthenticated);
+
 utilityBillRouter.get('/get-biller', acessToken, getBillers)
-utilityBillRouter.post('/pay-biller', isAuth, acessToken, payBillers)
+utilityBillRouter.post('/pay-biller', acessToken, payBillers)
 
 /**
  * @swagger
@@ -19,7 +25,7 @@ utilityBillRouter.post('/pay-biller', isAuth, acessToken, payBillers)
  * @swagger
  * /utility/get-biller:
  *   get:
- *     summary: Get Biller details 
+ *     summary: Get Billers 
  *     tags:
  *       - utilityBills
  *     responses:
@@ -79,7 +85,7 @@ utilityBillRouter.post('/pay-biller', isAuth, acessToken, payBillers)
  * @swagger
  * /utility/pay-biller:
  *   post:
- *     summary: pay requested biller
+ *     summary: Pay Biller
  *     tags:
  *       - utilityBills
  *     requestBody:

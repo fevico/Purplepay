@@ -1,0 +1,77 @@
+{
+  "total": 10,
+  "passed": 0,
+  "failed": 10,
+  "tests": [
+    {
+      "name": "Customer Creation",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.228Z",
+      "response": null,
+      "error": ""
+    },
+    {
+      "name": "Card Creation",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.230Z",
+      "response": null,
+      "error": "Customer email not available from previous test"
+    },
+    {
+      "name": "Fund Card",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.232Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Card Details",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.233Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Card Transactions",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.234Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Freeze Card",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.234Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Unfreeze Card",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.236Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Card History",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.237Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Withdraw from Card",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.239Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    },
+    {
+      "name": "Card Status",
+      "passed": false,
+      "timestamp": "2025-03-19T12:05:06.240Z",
+      "response": null,
+      "error": "Card ID not available from previous test"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+
+=================================================
+WALLET API TESTING SCRIPT
+=================================================
+
+IMPORTANT: Before running this script, you need to:
+1. Start the server (npm run dev)
+2. Create a user and login to get an auth token
+3. Replace 'YOUR_AUTH_TOKEN_HERE' in this script with your actual token
+
+To create a user and get a token:
+1. Use Postman or curl to call POST http://localhost:9876/auth/create with:
+   {
+     "email": "your-email@example.com",
+     "password": "your-password"
+   }
+2. Verify your email using the token received
+3. Login with POST http://localhost:9876/auth/login using the same credentials
+4. Copy the token from the response and update this script
+
+=================================================
+
+Starting wallet tests...
+Using API URL: http://localhost:9876
+Using AUTH_TOKEN: eyJhbGciOi...
+
+--- Testing Create Wallet API ---
+Creating wallet...
+Wallet created successfully: {
+  message: 'Wallet created successfully',
+  createWallet: {
+    balance: 0,
+    userId: '67d9a3bcbbc31ff5bf6c394c',
+    _id: '67d9a6c8352d375be2b77682',
+    createdAt: '2025-03-18T17:00:56.565Z',
+    updatedAt: '2025-03-18T17:00:56.565Z',
+    __v: 0
+  }
+}
+
+--- Wallet Analysis ---
+Wallet ID: 67d9a6c8352d375be2b77682
+User ID: 67d9a3bcbbc31ff5bf6c394c
+Balance: 0
+Created At: 2025-03-18T17:00:56.565Z
+Bank Name: Not provided
+Account Name: Not provided
+Account Number: Not provided
+
+Note: The bank list and account details endpoints require a valid PUBLIC_KEY environment variable to be set.
+These endpoints may not work in the test environment without proper API credentials.
+
+--- Testing Bank List API ---
+Fetching bank list...
+Bank list fetched successfully: {
+  banks: [
+    { code: '110005', name: '3LINE CARD MANAGEMENT LIMITED' },
+    { code: '110072', name: '78 FINANCE COMPANY LIMITED' },
+    { code: '090629', name: '9JAPAY MICROFINANCE BANK' },
+    { code: '120001', name: '9 PAYMENT SERVICE BANK' },
+    {
+      code: '050005',
+      name: 'AAA FINANCE AND INVESTMENT COMPANY LIMITED'
+    },
+    { code: '070010', name: 'ABBEY MORTGAGE BANK' },
+    { code: '090270', name: 'AB MICROFINANCE BANK' },
+    { code: '090260', name: 'ABOVE ONLY MICROFINANCE BANK' },
+    { code: '288037', name: 'ABSA BANK GHANA LIMITED' },
+    { code: '090640', name: 'ABSU MICROFINANCE BANK' },
+    { code: '090424', name: 'ABUCOOP MFB' },
+    { code: '090545', name: 'ABULESORO MICROFINANCE BANK' },
+    { code: '090197', name: 'ABU MICROFINANCE BANK' },
+    { code: '090202', name: 'ACCELEREX NETWORK LIMITED' },
+    { code: '000014', name: 'ACCESS BANK' },
+    { code: '000005', name: 'ACCESS(DIAMOND) BANK' },
+    { code: '100013', name: 'ACCESS MONEY' },
+    { code: '100052', name: 'ACCESS YELLO & BETA' },
+    { code: '090134', name: 'ACCION MICROFINANCE BANK' },
+    { code: '090483', name: 'ADA MFB' },
+    { code: '090160', name: 'ADDOSSER MICROFINANCE BANK' },
+    { code: '090268', name: 'ADEYEMI COLLEGE STAFF MICROFINANCE BANK' },
+    { code: '090155', name: 'ADVANS LA FAYETTE  MICROFINANCE BANK' },
+    { code: '090614', name: 'AELLA MICROFINANCE BANK' },
+    { code: '090292', name: 'AFEKHAFE MICROFINANCE BANK' },
+    { code: '090518', name: 'AFEMAI MFB' },
+    { code: '100028', name: 'AG MORTGAGE BANK' },
+    { code: '090371', name: 'AGOSASA MICROFINANCE BANK' },
+    { code: '090698', name: 'AKALABO MFB' },
+    { code: '090608', name: 'AKPO MICROFINANCE BANK' },
+    { code: '090561', name: 'AKUCHUKWU MICROFINANCE BANK' },
+    { code: '090531', name: 'AKU MICROFINANCE BANK' },
+    { code: '090133', name: 'AL-BARAKAH MICROFINANCE BANK' },
+    { code: '090259', name: 'ALEKUN MICROFINANCE BANK' },
+    { code: '090297', name: 'ALERT MICROFINANCE BANK' },
+    { code: '090277', name: 'AL-HAYAT MICROFINANCE BANK' },
+    { code: '090131', name: 'ALLWORKERS MICROFINANCE BANK' },
+    { code: '090548', name: 'ALLY MICROFINANCE BANK' },
+    { code: '090169', name: 'ALPHA KAPITAL MICROFINANCE BANK' },
+    { code: '000037', name: 'ALTERNATIVE BANK LIMITED' },
+    { code: '090394', name: 'AMAC MICROFINANCE BANK' },
+    { code: '090180', name: 'AMJU UNIQUE MICROFINANCE BANK' },
+    { code: '090116', name: 'AMML MICROFINANCE BANK' },
+    { code: '090610', name: 'AMOYE MICROFINANCE BANK' },
+    { code: '090645', name: 'AMUCHA MICROFINANCE BANK' },
+    { code: '090143', name: 'APEKS MICROFINANCE BANK' },
+    { code: '090737', name: 'APEX TRUST MFB' },
+    { code: '090376', name: 'APPLE MICROFINANCE BANK' },
+    { code: '090282', name: 'ARISE MICROFINANCE BANK' },
+    { code: '090001', name: 'ASO SAVINGS' },
+    { code: '090544', name: 'ASPIRE MICROFINANCE BANK' },
+    { code: '090287', name: 'ASSET MATRIX MICROFINANCE BANK' },
+    { code: '090473', name: 'ASSETS MICROFINANCE BANK' },
+    { code: '090172', name: 'ASTRAPOLARIS MICROFINANCE BANK' },
+    { code: '090264', name: 'AUCHI MICROFINANCE BANK' },
+    { code: '090633', name: 'AWACASH MICROFINANCE BANK' },
+    { code: '090729', name: 'BABCOCK MFB' },
+    { code: '090625', name: 'BABURA MICROFINANCE BANK' },
+    { code: '090188', name: 'BAINES CREDIT MICROFINANCE BANK' },
+    { code: '090563', name: 'BALERA MICROFINANCE BANK' },
+    { code: '090326', name: 'BALOGUN GAMBARI MICROFINANCE BANK' },
+    { code: '090651', name: 'BAM MICROFINANCE BANK' },
+    { code: '090581', name: 'BANC CORP MICROFINANCE BANK' },
+    { code: '090275', name: 'BANKIT MICROFINANCE BANK' },
+    { code: '090529', name: 'BANKLY(AMPERSAND) MICROFINANCE BANK' },
+    { code: '288028', name: 'BANK OF AFRICA GHANA LTD' },
+    { code: '288001', name: 'BANK OF GHANA' },
+    { code: '694001', name: 'BANK OF SIERRA LEONE' },
+    {
+      code: '324001',
+      name: 'BANQUE CENTRALE DE LA RÉPUBLIQUE DE GUINÉE'
+    },
+    { code: '090136', name: 'BAOBAB MICROFINANCE BANK' },
+    { code: '090316', name: 'BAYERO UNIVERSITY MICROFINANCE BANK' },
+    { code: '090127', name: 'BC KASH MICROFINANCE BANK' },
+    { code: '090672', name: 'BELLBANK MFB' },
+    { code: '090618', name: 'BERACHAH MICROFINANCE BANK' },
+    { code: '090615', name: 'BESTSTAR MICROFINANCE BANK' },
+    { code: '090683', name: 'BETHEL MICROFINANCE BANK' },
+    { code: '090336', name: 'BIPC MICROFINANCE BANK' },
+    { code: '090555', name: 'BISHOPGATE MICROFINANCE BANK' },
+    { code: '270014', name: 'BLOOM BANK AFRICA GAMBIA LIMITED' },
+    { code: '090431', name: 'BLUEWHALES MICROFINANCE BANK' },
+    { code: '090117', name: 'BOCTRUST MICROFINANCE BANK LIMITED' },
+    { code: '090703', name: 'BOKKOS MICROFINANCE BANK' },
+    { code: '090395', name: 'BORGU  MICROFINANCE BANK' },
+    { code: '090176', name: 'BOSAK MICROFINANCE BANK' },
+    { code: '090148', name: 'BOWEN MICROFINANCE BANK' },
+    { code: '050006', name: 'BRANCH INTERNATIONAL FINANCIAL SERVICES' },
+    { code: '070015', name: 'BRENT MORTGAGE BANK' },
+    { code: '090293', name: 'BRETHREN MICROFINANCE BANK' },
+    { code: '090393', name: 'BRIDGEWAY MICROFINANACE BANK' },
+    { code: '090308', name: 'BRIGHTWAY MICROFINANCE BANK' },
+    { code: '090636', name: 'BRIYTH-COVENANT MICROFINANCE BANK' },
+    { code: '090568', name: 'BROADVIEW MICROFINANCE BANK' },
+    { code: '090613', name: 'BUILD MICROFINANCE BANK' },
+    { code: '090661', name: 'BUNDI MICROFINANCE BANK' },
+    { code: '090655', name: 'BUNKURE MICROFINANCE BANK' },
+    { code: '090406', name: 'BUSINESS SUPPORT MICROFINANCE BANK' },
+    { code: '090682', name: 'BUYPOWER MICROFINANACE BANK' },
+    { code: '288036', name: 'CALBANK PLC' },
+    { code: '090647', name: 'CANAAN MICROFINANCE BANK' },
+    { code: '090445', name: 'CAPSTONE MICROFINANCE BANK' },
+    ... 469 more items
+  ]
+}
+
+--- Testing Account Details API ---
+Getting account details for account number: 0123456789, sort code: 000014...
+Account details fetched successfully: {
+  accountDetails: {
+    status: true,
+    account: {
+      bankCode: '000014',
+      accountName: 'okey Joy Chidimma',
+      accountNumber: '0123456789'
+    }
+  }
+}
+
+All tests completed successfully!
+
+Summary:
+1. Wallet creation: SUCCESS
+2. Bank list retrieval: SUCCESS
+3. Account details retrieval: TESTED with test account
+
+Note: To fully test the wallet functionality, ensure the PUBLIC_KEY environment variable is set correctly.
+The current implementation integrates with the Strowallet API for virtual bank accounts.

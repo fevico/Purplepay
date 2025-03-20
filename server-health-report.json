@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-03-19T00:34:48.869Z",
+  "serverStatus": "UP",
+  "authEndpoints": "AVAILABLE",
+  "walletEndpoints": "AVAILABLE",
+  "billsPaymentEndpoints": "AVAILABLE",
+  "mongoDBConnection": "CONNECTED",
+  "overallStatus": "HEALTHY"
+}

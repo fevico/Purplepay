@@ -1,0 +1,2862 @@
+{
+  "users": [
+    {
+      "id": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "email": "testuser@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-19T00:37:21.565Z"
+    },
+    {
+      "id": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "email": "security-test@example.com",
+      "password": "SecurePassword123!",
+      "name": "Security Tester",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-19T00:53:48.973Z"
+    },
+    {
+      "id": "4f95487f-2600-4c4f-9c48-74193e0d7a79",
+      "email": "test@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "63574c79-c630-4d06-8f5c-d7633492376c",
+      "createdAt": "2025-03-20T05:06:44.533Z"
+    },
+    {
+      "id": "d322babe-1c8c-4dd1-967b-e7fac4f8af80",
+      "email": "test1742447275958@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T05:07:55.995Z",
+      "transactionPin": "1234",
+      "onboardingSteps": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "bvnVerification": {
+        "bvn": "12345678901",
+        "firstName": "Test",
+        "lastName": "User",
+        "dateOfBirth": "1990-01-01",
+        "phoneNumber": "+2347012345678",
+        "transactionRef": "b8e74560-a66a-44e2-bfff-4ef9f338de59",
+        "status": "verified",
+        "createdAt": "2025-03-20T05:07:56.047Z",
+        "verifiedAt": "2025-03-20T05:07:56.063Z"
+      },
+      "usernameTag": "testuser",
+      "selectedTags": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "32479849-4e09-4a38-b3e1-6ce29191bdf3",
+      "email": "test1742447937408@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T05:18:57.606Z",
+      "transactionPin": "1234",
+      "onboardingSteps": {
+        "pinSetup": true,
+        "bvnVerified": true
+      },
+      "bvnVerification": {
+        "bvn": "12345678901",
+        "firstName": "Test",
+        "lastName": "User",
+        "dateOfBirth": "1990-01-01",
+        "phoneNumber": "+2347012345678",
+        "transactionRef": "c6e492e7-1b60-44e8-8cff-f33ffe244998",
+        "status": "verified",
+        "createdAt": "2025-03-20T05:18:57.665Z",
+        "verifiedAt": "2025-03-20T05:18:57.675Z"
+      }
+    },
+    {
+      "id": "7ebc635a-f8f5-4c36-a1a3-2e5f4aeb466d",
+      "email": "test1742447968474@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T05:19:28.536Z",
+      "transactionPin": "1234",
+      "onboardingSteps": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "bvnVerification": {
+        "bvn": "12345678901",
+        "firstName": "Test",
+        "lastName": "User",
+        "dateOfBirth": "1990-01-01",
+        "phoneNumber": "+2347012345678",
+        "transactionRef": "1113e871-9fde-474e-949d-96b12ef1c57b",
+        "status": "verified",
+        "createdAt": "2025-03-20T05:19:28.572Z",
+        "verifiedAt": "2025-03-20T05:19:28.579Z"
+      },
+      "usernameTag": "testuser1742447968584",
+      "selectedTags": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "ef1d638a-5874-461a-998c-808fbbf5a3df",
+      "email": "perf17424480006700@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "308d8c74-cee3-4cb3-8aee-df6495b5d9cd",
+      "createdAt": "2025-03-20T05:20:00.727Z"
+    },
+    {
+      "id": "87aed87b-63e7-4fd2-ab03-af848de402ac",
+      "email": "perf17424480007381@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "432520e4-8973-4a94-b041-6bcbedac54b0",
+      "createdAt": "2025-03-20T05:20:00.743Z"
+    },
+    {
+      "id": "7e68958c-2b88-4559-84cb-c3d0b1b523ac",
+      "email": "perf17424480007472@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "f0cd9f0b-bae1-43d2-bcd3-68ed33a2054e",
+      "createdAt": "2025-03-20T05:20:00.751Z"
+    },
+    {
+      "id": "54b6d595-1941-4634-9dad-33b32c58d154",
+      "email": "perf17424480007533@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "757cff08-12b3-49be-8548-435ea3dfad55",
+      "createdAt": "2025-03-20T05:20:00.759Z"
+    },
+    {
+      "id": "a4f3bbd8-6daa-44b6-bcfd-89b5faa203df",
+      "email": "perf17424480007624@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "bed8facf-6674-4ca8-adfe-ba6ba674f284",
+      "createdAt": "2025-03-20T05:20:00.765Z"
+    },
+    {
+      "id": "ba3fcee3-c2e4-42a5-a244-eef0c76c0f7f",
+      "email": "test1742448293255@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "d3c9e150-7b93-4a4f-9216-34a311cc98f1",
+      "createdAt": "2025-03-20T05:24:53.258Z"
+    },
+    {
+      "id": "dd3a248d-682c-4214-b827-d9e851c99221",
+      "email": "test1742448407842@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T05:26:48.174Z",
+      "transactionPin": "1234",
+      "onboardingSteps": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "bvnVerification": {
+        "bvn": "12345678901",
+        "firstName": "Test",
+        "lastName": "User",
+        "dateOfBirth": "1990-01-01",
+        "phoneNumber": "+2347012345678",
+        "transactionRef": "186da8b4-c0cf-4960-87a3-c5ea03304436",
+        "status": "verified",
+        "createdAt": "2025-03-20T05:26:48.203Z",
+        "verifiedAt": "2025-03-20T05:26:48.211Z"
+      },
+      "usernameTag": "testuser1742448408215",
+      "selectedTags": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "7ed68441-0910-4cb5-afbf-cd94218c26bf",
+      "email": "test1742449582480@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "52c897f8-5866-4674-ac31-d7089172f2fe",
+      "createdAt": "2025-03-20T05:46:22.753Z"
+    },
+    {
+      "id": "9a6abd1b-58ab-49e5-beb8-c7a93f83acc1",
+      "email": "test1742451175869@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "5d699e9e-b5b7-496f-a932-df37e9857e42",
+      "createdAt": "2025-03-20T06:12:56.113Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "d6fe0793-42a2-4ccf-abf3-13f5088498fb",
+      "email": "frankalasho@gmail.con",
+      "password": "Korede16@@",
+      "name": "Francis Alagbe",
+      "phoneNumber": "2045906324",
+      "verified": false,
+      "verificationToken": "dcf630a3-6bdd-4af9-bfb9-1c7cf760289f",
+      "createdAt": "2025-03-20T06:16:40.133Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "017d6130-9a79-4ff8-b8e6-a7e1222566cf",
+      "email": "sholla.alagbe@gmail.com",
+      "password": "Korede16",
+      "name": "francis Alagbe",
+      "phoneNumber": "2045906324",
+      "verified": false,
+      "verificationToken": "f3fcff1d-990e-403f-9daf-55219e19e013",
+      "createdAt": "2025-03-20T06:18:29.899Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "01d067cb-8da1-46be-92a8-6daa0e2c7b5b",
+      "email": "test-user-1742452757031@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": false,
+      "verificationToken": "900a37b3-0a84-4344-9a01-b5ae61d3486c",
+      "createdAt": "2025-03-20T06:39:17.274Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "539f9efa-52c0-441e-a59f-4158b637b3e1",
+      "email": "test1742452888582@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T06:41:28.799Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "email": "test1742453196180@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": null,
+      "createdAt": "2025-03-20T06:46:36.500Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "johndoe"
+    },
+    {
+      "id": "bba1dfeb-462a-4ec3-aeef-35fd88511ccc",
+      "email": "test-user-1742453713813@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": false,
+      "verificationToken": "7d272f93-9648-4723-84a9-33ff87cb3ecf",
+      "createdAt": "2025-03-20T06:55:14.332Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "15d9a556-2950-4208-9695-175b970c01aa",
+      "email": "test-user-1742453876437@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "c991bc27-2a8e-4732-be51-0a7bc3e7a926",
+      "createdAt": "2025-03-20T06:57:56.711Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "testuser877173"
+    },
+    {
+      "id": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "email": "test-user-1742453913115@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "d7d983d7-496a-4338-a340-930c15294c7f",
+      "createdAt": "2025-03-20T06:58:33.330Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "testuser913789"
+    },
+    {
+      "id": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "email": "test-user-1742453966565@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "f6ea7d09-63b0-48c9-a020-e13826fd7883",
+      "createdAt": "2025-03-20T06:59:26.752Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "testuser967360"
+    },
+    {
+      "id": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "email": "test1742454010846@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "81c20075-83d9-4774-bb9f-d2ca567421e7",
+      "createdAt": "2025-03-20T07:00:11.032Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "user010846"
+    },
+    {
+      "id": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "email": "test1742454279541@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "0563626f-5989-49db-a8ae-f53ffc45a4c3",
+      "createdAt": "2025-03-20T07:04:40.263Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "user279541"
+    },
+    {
+      "id": "14699728-1ee3-4f37-ad8b-d98f5b3ddcb4",
+      "email": "test21742454279541@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "de9d4d0f-949d-4669-891d-fc90744bd3d9",
+      "createdAt": "2025-03-20T07:04:41.890Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "60ea36ff-184c-4d61-a606-fff5f994d693",
+      "email": "test31742454279541@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "d6293c90-0a80-4477-9d20-7e22940a47b2",
+      "createdAt": "2025-03-20T07:04:42.401Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "transactionPin": "1234"
+    },
+    {
+      "id": "4c274dec-1471-4fe5-800c-904610f88a4e",
+      "email": "test41742454279541@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "f48742f8-41e5-4d47-8c7f-f40756317ebe",
+      "createdAt": "2025-03-20T07:04:43.326Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": true,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "username": "test279541"
+    },
+    {
+      "id": "7105cd1d-5011-431a-aee4-43fcec80c6b3",
+      "email": "test51742454279541@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "3495aef1-d6b7-4857-bb88-4eaa1dc7e4ad",
+      "createdAt": "2025-03-20T07:04:43.870Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "username": "skip279541"
+    },
+    {
+      "id": "f2162d94-5a19-4a37-9aef-285e8ee9cc1d",
+      "email": "francalagbe@gmail.com",
+      "password": "Korede16@@",
+      "name": "Franco Alagbe",
+      "phoneNumber": "2045906324",
+      "verified": false,
+      "verificationToken": "2d2b2adc-9340-4a3a-889d-5a26c68f1217",
+      "createdAt": "2025-03-20T07:23:41.946Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "364af04b-e5fa-49e3-b474-067fa4707283",
+      "email": "thinkout98@gmail.com",
+      "password": "Korede16",
+      "name": "Dami",
+      "phoneNumber": "2045906324",
+      "verified": true,
+      "verificationToken": "128c126a-1418-439e-a4e1-7f0142e6b03c",
+      "createdAt": "2025-03-20T07:45:23.180Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "79c48034-3456-4ad1-985d-c93fa6c01a03",
+      "email": "test1742472182353@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "291b2f",
+      "createdAt": "2025-03-20T12:03:05.990Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "1e11f3c4-77c0-4866-9252-b66993c68d78",
+      "email": "test1742472232660@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": "f9f385",
+      "createdAt": "2025-03-20T12:03:52.707Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "d3b6acde-0942-44d6-a1bf-571cf4027c37",
+      "email": "test1742472401141@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": "50f201",
+      "createdAt": "2025-03-20T12:06:41.918Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true
+    },
+    {
+      "id": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "email": "test1742472628149@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": true,
+      "verificationToken": "2fd669",
+      "createdAt": "2025-03-20T12:10:28.663Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": true,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "1234",
+      "bvnVerified": true,
+      "username": "user1742472630465"
+    },
+    {
+      "id": "83390074-2b25-475c-8acd-2743a37c48b0",
+      "email": "perf17424726696720@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "ddda10",
+      "createdAt": "2025-03-20T12:11:10.091Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "489d2a77-6855-4417-af9e-b7f99faf0a77",
+      "email": "perf17424726702021@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "3b1b04",
+      "createdAt": "2025-03-20T12:11:10.295Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "131d7bde-8ec6-4231-b0dd-c348cc00650c",
+      "email": "perf17424726705032@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "168514",
+      "createdAt": "2025-03-20T12:11:10.618Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "10d3d3a2-198a-48bd-9f4e-f9207115c785",
+      "email": "perf17424726708083@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "3a403c",
+      "createdAt": "2025-03-20T12:11:10.945Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "6c535e91-0211-4d6b-badd-91fd2e6734a9",
+      "email": "perf17424726711154@example.com",
+      "password": "Password123",
+      "name": "Performance Test",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "add636",
+      "createdAt": "2025-03-20T12:11:11.420Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "2f4e9ed9-cd74-4f3c-9109-dfcefb298117",
+      "email": "test-user-1742472873226@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "33ab0d",
+      "createdAt": "2025-03-20T12:14:33.772Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "20c692fb-7532-470c-8970-2cd44b362396",
+      "email": "test-user-1742472954146@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "367163",
+      "createdAt": "2025-03-20T12:15:55.791Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "bef5beb2-bc3e-440b-a2fc-6183092ba6b5",
+      "email": "test-user-1742473035285@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "752f79",
+      "createdAt": "2025-03-20T12:17:15.627Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "38eba47f-3b60-40df-8528-a852ec7c46d3",
+      "email": "test-user-1742473078287@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "4067a4",
+      "createdAt": "2025-03-20T12:17:58.781Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "a67f68f1-34cf-4f90-8b94-1639adefcf17",
+      "email": "test-user-1742473126298@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2348012345678",
+      "verified": true,
+      "verificationToken": "bf77f0",
+      "createdAt": "2025-03-20T12:18:49.768Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": true,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "transactionPin": "1234",
+      "username": "user1742473130380"
+    },
+    {
+      "id": "8d229b0f-aac1-4917-9c7b-2bdd8a1ceb82",
+      "email": "falagbe@cyreva.com",
+      "password": "Korede16@@",
+      "name": "Sola alagbe",
+      "phoneNumber": "2045906324",
+      "verified": true,
+      "verificationToken": "40cf62",
+      "createdAt": "2025-03-20T12:29:06.333Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "transactionPin": "2424"
+    },
+    {
+      "id": "eca97f4b-e271-4ea5-90b1-2c71552a1218",
+      "email": "test1742475283969@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "7f88c4",
+      "createdAt": "2025-03-20T12:54:44.188Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "0bfc4577-f0cf-45d5-994e-008ee3f77016",
+      "email": "test1742475284805@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "ae155d",
+      "createdAt": "2025-03-20T12:54:44.810Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "d3590e42-e8ef-4296-a8ec-537031f793c6",
+      "email": "test1742475500502@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "1e41de",
+      "createdAt": "2025-03-20T12:58:20.696Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "4c3d19a8-099e-454e-bf8e-4920862f2027",
+      "email": "test1742475502221@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "3560f1",
+      "createdAt": "2025-03-20T12:58:22.265Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "86c0472a-a69c-45f1-8a39-35b39284b628",
+      "email": "test1742475502594@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "8f075e",
+      "createdAt": "2025-03-20T12:58:22.596Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "29fd9a45-bc6b-43dd-b603-1746d329dd78",
+      "email": "test1742475696992@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "052a2c",
+      "createdAt": "2025-03-20T13:01:37.055Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "39c22823-821e-410a-8ebe-2782d97aba4c",
+      "email": "test1742475697730@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "2b1b4e",
+      "createdAt": "2025-03-20T13:01:37.776Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "006967b6-81b7-43e8-ad8b-d354c33e9fcc",
+      "email": "test1742475698178@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "08ce06",
+      "createdAt": "2025-03-20T13:01:38.182Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "8d285f21-b4f5-45f2-878d-7d9eb8c4a064",
+      "email": "test1742475767781@example.com",
+      "password": "Password123!",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "c0bfd4",
+      "createdAt": "2025-03-20T13:02:47.867Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "d00c258d-7e74-42fe-ac5a-057c9c4a9a4f",
+      "email": "test1742475768346@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "aa1e0b",
+      "createdAt": "2025-03-20T13:02:48.355Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "fdbd78d4-a4d2-49c3-9f4e-d06e022784ac",
+      "email": "test1742475768955@example.com",
+      "password": "Password123",
+      "name": "Test User",
+      "phoneNumber": "+2347012345678",
+      "verified": false,
+      "verificationToken": "6e5997",
+      "createdAt": "2025-03-20T13:02:48.963Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "2d5a7a44-cf05-41ff-8513-e008a51c612a",
+      "email": "testme@test.com",
+      "password": "korede16@@",
+      "name": "testme",
+      "phoneNumber": "2049998000",
+      "verified": true,
+      "verificationToken": "d361e5",
+      "createdAt": "2025-03-20T13:46:57.478Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      },
+      "transactionPin": "2424"
+    },
+    {
+      "id": "66940af2-1f1d-451c-8901-77df6bded45d",
+      "email": "f@gmail.com",
+      "password": "Korede16@@",
+      "name": "Francis ",
+      "phoneNumber": "2045906324",
+      "verified": true,
+      "verificationToken": "e96234",
+      "createdAt": "2025-03-20T15:48:59.210Z",
+      "onboardingStatus": {
+        "pinSetup": false,
+        "bvnVerified": false,
+        "usernameTagSet": false,
+        "tagsSelected": false,
+        "onboardingComplete": false
+      }
+    },
+    {
+      "id": "ec4fbcf5-03fd-4c35-84b7-6152357d6501",
+      "email": "estheralagbe8@gmail.com",
+      "password": "Korede16@@",
+      "name": "Tolu",
+      "phoneNumber": "2045906324",
+      "verified": true,
+      "verificationToken": "0711b9",
+      "createdAt": "2025-03-20T16:10:44.910Z",
+      "onboardingStatus": {
+        "pinSetup": true,
+        "bvnVerified": false,
+        "usernameTagSet": true,
+        "tagsSelected": true,
+        "onboardingComplete": true
+      },
+      "transactionPin": "2424",
+      "username": "sholla95"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "27a30c52-531f-4dd9-a87a-bcd7c17a399a",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "type": "credit",
+      "amount": 10000,
+      "currency": "NGN",
+      "description": "Test funding",
+      "status": "completed",
+      "createdAt": "2025-03-19T00:37:21.658Z"
+    },
+    {
+      "id": "854ed8d5-fd15-4a48-ac42-e45760beac93",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "type": "debit",
+      "amount": 5000,
+      "currency": "NGN",
+      "description": "electricity bill payment to IKEDC",
+      "status": "completed",
+      "reference": "664efdd6-cc69-4b15-bd98-d0075547bbaa",
+      "createdAt": "2025-03-19T00:37:21.700Z"
+    },
+    {
+      "id": "2901783b-2c18-4485-a970-6a201f95ef0e",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "type": "debit",
+      "amount": 2500,
+      "currency": "NGN",
+      "description": "water bill payment to LAGOS_WATER",
+      "status": "completed",
+      "reference": "7757a84b-a201-4788-94ea-906ed921d866",
+      "createdAt": "2025-03-19T00:42:57.147Z"
+    },
+    {
+      "id": "daca2ada-aec3-4334-b6d9-7a85722d25f5",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "type": "credit",
+      "amount": 10000,
+      "currency": "NGN",
+      "description": "Test funding",
+      "status": "completed",
+      "createdAt": "2025-03-19T00:45:01.112Z"
+    },
+    {
+      "id": "70187c7a-673c-4fb8-a9d6-58e7e4d87b45",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "type": "debit",
+      "amount": 3000,
+      "currency": "NGN",
+      "description": "internet bill payment to MTN",
+      "status": "completed",
+      "reference": "ba51d437-b20a-4012-930d-6fe598510e8b",
+      "createdAt": "2025-03-19T00:45:13.950Z"
+    }
+  ],
+  "bvnVerifications": [
+    {
+      "id": "c9322062-6638-4bf9-8b90-362d028a3a8e",
+      "userId": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "bvn": "12345678901",
+      "verificationCode": "866295",
+      "verified": true,
+      "createdAt": "2025-03-20T06:46:36.790Z"
+    },
+    {
+      "id": "17153900-e70f-4ced-83c7-38b8709e9a0a",
+      "userId": "15d9a556-2950-4208-9695-175b970c01aa",
+      "bvn": "12345678901",
+      "verificationCode": "346083",
+      "verified": true,
+      "createdAt": "2025-03-20T06:57:57.011Z"
+    },
+    {
+      "id": "4c7aaa2e-aba0-47a7-915a-799bb834e09d",
+      "userId": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "bvn": "12345678901",
+      "verificationCode": "414123",
+      "verified": true,
+      "createdAt": "2025-03-20T06:58:33.641Z"
+    },
+    {
+      "id": "7000f97d-e9ba-4e82-a593-853a81ec7fd8",
+      "userId": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "bvn": "12345678901",
+      "verificationCode": "105264",
+      "verified": true,
+      "createdAt": "2025-03-20T06:59:27.220Z"
+    },
+    {
+      "id": "429da34c-f7d1-451b-a973-424f9e0f6dbc",
+      "userId": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "bvn": "12345678901",
+      "verificationCode": "588071",
+      "verified": true,
+      "createdAt": "2025-03-20T07:00:11.310Z"
+    },
+    {
+      "id": "64ba9e63-392e-4304-a424-edf5f432c487",
+      "userId": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "bvn": "12345678901",
+      "verificationCode": "360971",
+      "verified": true,
+      "createdAt": "2025-03-20T07:04:40.762Z"
+    },
+    {
+      "id": "18d28a4e-998c-4011-a59a-bf4134d804d6",
+      "userId": "d3b6acde-0942-44d6-a1bf-571cf4027c37",
+      "bvn": "12345678901",
+      "verificationCode": "675417",
+      "verified": true,
+      "createdAt": "2025-03-20T12:06:43.138Z"
+    },
+    {
+      "id": "6f936787-9292-4b51-9ab7-a305806a6a2a",
+      "userId": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "bvn": "12345678901",
+      "verificationCode": "436800",
+      "verified": true,
+      "createdAt": "2025-03-20T12:10:29.130Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "name": "Finance",
+      "icon": "💰"
+    },
+    {
+      "id": "2",
+      "name": "Technology",
+      "icon": "💻"
+    },
+    {
+      "id": "3",
+      "name": "Health",
+      "icon": "🏥"
+    },
+    {
+      "id": "4",
+      "name": "Education",
+      "icon": "🎓"
+    },
+    {
+      "id": "5",
+      "name": "Entertainment",
+      "icon": "🎬"
+    },
+    {
+      "id": "6",
+      "name": "Food",
+      "icon": "🍔"
+    },
+    {
+      "id": "7",
+      "name": "Travel",
+      "icon": "✈️"
+    },
+    {
+      "id": "8",
+      "name": "Shopping",
+      "icon": "🛍️"
+    },
+    {
+      "id": "9",
+      "name": "Sports",
+      "icon": "⚽"
+    },
+    {
+      "id": "10",
+      "name": "Music",
+      "icon": "🎵"
+    }
+  ],
+  "userTags": [
+    {
+      "userId": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "tagId": "1",
+      "createdAt": "2025-03-20T06:46:37.226Z"
+    },
+    {
+      "userId": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "tagId": "2",
+      "createdAt": "2025-03-20T06:46:37.226Z"
+    },
+    {
+      "userId": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "tagId": "3",
+      "createdAt": "2025-03-20T06:46:37.226Z"
+    },
+    {
+      "userId": "15d9a556-2950-4208-9695-175b970c01aa",
+      "tagId": "1",
+      "createdAt": "2025-03-20T06:57:57.495Z"
+    },
+    {
+      "userId": "15d9a556-2950-4208-9695-175b970c01aa",
+      "tagId": "2",
+      "createdAt": "2025-03-20T06:57:57.495Z"
+    },
+    {
+      "userId": "15d9a556-2950-4208-9695-175b970c01aa",
+      "tagId": "3",
+      "createdAt": "2025-03-20T06:57:57.495Z"
+    },
+    {
+      "userId": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "tagId": "1",
+      "createdAt": "2025-03-20T06:58:34.074Z"
+    },
+    {
+      "userId": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "tagId": "2",
+      "createdAt": "2025-03-20T06:58:34.074Z"
+    },
+    {
+      "userId": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "tagId": "3",
+      "createdAt": "2025-03-20T06:58:34.074Z"
+    },
+    {
+      "userId": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "tagId": "1",
+      "createdAt": "2025-03-20T06:59:27.661Z"
+    },
+    {
+      "userId": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "tagId": "2",
+      "createdAt": "2025-03-20T06:59:27.661Z"
+    },
+    {
+      "userId": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "tagId": "3",
+      "createdAt": "2025-03-20T06:59:27.661Z"
+    },
+    {
+      "userId": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "tagId": "1",
+      "createdAt": "2025-03-20T07:00:11.698Z"
+    },
+    {
+      "userId": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "tagId": "2",
+      "createdAt": "2025-03-20T07:00:11.698Z"
+    },
+    {
+      "userId": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "tagId": "3",
+      "createdAt": "2025-03-20T07:00:11.698Z"
+    },
+    {
+      "userId": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "tagId": "1",
+      "createdAt": "2025-03-20T07:04:41.496Z"
+    },
+    {
+      "userId": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "tagId": "2",
+      "createdAt": "2025-03-20T07:04:41.496Z"
+    },
+    {
+      "userId": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "tagId": "3",
+      "createdAt": "2025-03-20T07:04:41.496Z"
+    },
+    {
+      "userId": "7105cd1d-5011-431a-aee4-43fcec80c6b3",
+      "tagId": "1",
+      "createdAt": "2025-03-20T07:04:44.755Z"
+    },
+    {
+      "userId": "7105cd1d-5011-431a-aee4-43fcec80c6b3",
+      "tagId": "2",
+      "createdAt": "2025-03-20T07:04:44.755Z"
+    },
+    {
+      "userId": "7105cd1d-5011-431a-aee4-43fcec80c6b3",
+      "tagId": "3",
+      "createdAt": "2025-03-20T07:04:44.755Z"
+    },
+    {
+      "userId": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "tagId": "1",
+      "createdAt": "2025-03-20T12:10:31.083Z"
+    },
+    {
+      "userId": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "tagId": "2",
+      "createdAt": "2025-03-20T12:10:31.083Z"
+    },
+    {
+      "userId": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "tagId": "3",
+      "createdAt": "2025-03-20T12:10:31.083Z"
+    },
+    {
+      "userId": "ec4fbcf5-03fd-4c35-84b7-6152357d6501",
+      "tagId": "10",
+      "createdAt": "2025-03-20T16:16:57.118Z"
+    },
+    {
+      "userId": "ec4fbcf5-03fd-4c35-84b7-6152357d6501",
+      "tagId": "9",
+      "createdAt": "2025-03-20T16:16:57.122Z"
+    },
+    {
+      "userId": "ec4fbcf5-03fd-4c35-84b7-6152357d6501",
+      "tagId": "8",
+      "createdAt": "2025-03-20T16:16:57.122Z"
+    }
+  ],
+  "emailVerifications": [
+    {
+      "userId": "01d067cb-8da1-46be-92a8-6daa0e2c7b5b",
+      "email": "test-user-1742452757031@example.com",
+      "token": "900a37b3-0a84-4344-9a01-b5ae61d3486c",
+      "createdAt": "2025-03-20T06:39:17.479Z"
+    },
+    {
+      "userId": "539f9efa-52c0-441e-a59f-4158b637b3e1",
+      "email": "test1742452888582@example.com",
+      "token": "23bd34ad-afad-4756-91d2-acd7126b3850",
+      "createdAt": "2025-03-20T06:41:28.799Z"
+    },
+    {
+      "userId": "412268a6-1cef-44c1-90b5-6d811f4e765f",
+      "email": "test1742453196180@example.com",
+      "token": "993033a8-b843-439c-b556-4e6b61dee462",
+      "createdAt": "2025-03-20T06:46:36.511Z"
+    },
+    {
+      "userId": "bba1dfeb-462a-4ec3-aeef-35fd88511ccc",
+      "email": "test-user-1742453713813@example.com",
+      "token": "7d272f93-9648-4723-84a9-33ff87cb3ecf",
+      "createdAt": "2025-03-20T06:55:14.347Z"
+    },
+    {
+      "userId": "15d9a556-2950-4208-9695-175b970c01aa",
+      "email": "test-user-1742453876437@example.com",
+      "token": "c991bc27-2a8e-4732-be51-0a7bc3e7a926",
+      "createdAt": "2025-03-20T06:57:56.712Z"
+    },
+    {
+      "userId": "449579bb-2798-401e-9dc0-229fcaa4562e",
+      "email": "test-user-1742453913115@example.com",
+      "token": "d7d983d7-496a-4338-a340-930c15294c7f",
+      "createdAt": "2025-03-20T06:58:33.330Z"
+    },
+    {
+      "userId": "c1c0a6f3-36c0-42cd-99d7-1f541e235466",
+      "email": "test-user-1742453966565@example.com",
+      "token": "f6ea7d09-63b0-48c9-a020-e13826fd7883",
+      "createdAt": "2025-03-20T06:59:26.752Z"
+    },
+    {
+      "userId": "b9588c51-21ba-42fe-a6b4-b3d36e911312",
+      "email": "test1742454010846@example.com",
+      "token": "81c20075-83d9-4774-bb9f-d2ca567421e7",
+      "createdAt": "2025-03-20T07:00:11.032Z"
+    },
+    {
+      "userId": "8848b6c2-ee39-472c-8f5d-e4c74b7ce073",
+      "email": "test1742454279541@example.com",
+      "token": "0563626f-5989-49db-a8ae-f53ffc45a4c3",
+      "createdAt": "2025-03-20T07:04:40.263Z"
+    },
+    {
+      "userId": "14699728-1ee3-4f37-ad8b-d98f5b3ddcb4",
+      "email": "test21742454279541@example.com",
+      "token": "de9d4d0f-949d-4669-891d-fc90744bd3d9",
+      "createdAt": "2025-03-20T07:04:41.890Z"
+    },
+    {
+      "userId": "60ea36ff-184c-4d61-a606-fff5f994d693",
+      "email": "test31742454279541@example.com",
+      "token": "d6293c90-0a80-4477-9d20-7e22940a47b2",
+      "createdAt": "2025-03-20T07:04:42.401Z"
+    },
+    {
+      "userId": "4c274dec-1471-4fe5-800c-904610f88a4e",
+      "email": "test41742454279541@example.com",
+      "token": "f48742f8-41e5-4d47-8c7f-f40756317ebe",
+      "createdAt": "2025-03-20T07:04:43.326Z"
+    },
+    {
+      "userId": "7105cd1d-5011-431a-aee4-43fcec80c6b3",
+      "email": "test51742454279541@example.com",
+      "token": "3495aef1-d6b7-4857-bb88-4eaa1dc7e4ad",
+      "createdAt": "2025-03-20T07:04:43.870Z"
+    },
+    {
+      "userId": "f2162d94-5a19-4a37-9aef-285e8ee9cc1d",
+      "email": "francalagbe@gmail.com",
+      "token": "2d2b2adc-9340-4a3a-889d-5a26c68f1217",
+      "createdAt": "2025-03-20T07:23:41.946Z"
+    },
+    {
+      "userId": "79c48034-3456-4ad1-985d-c93fa6c01a03",
+      "email": "test1742472182353@example.com",
+      "token": "291b2f",
+      "createdAt": "2025-03-20T12:03:05.990Z"
+    },
+    {
+      "userId": "1e11f3c4-77c0-4866-9252-b66993c68d78",
+      "email": "test1742472232660@example.com",
+      "token": "f9f385",
+      "createdAt": "2025-03-20T12:03:52.707Z"
+    },
+    {
+      "userId": "d3b6acde-0942-44d6-a1bf-571cf4027c37",
+      "email": "test1742472401141@example.com",
+      "token": "50f201",
+      "createdAt": "2025-03-20T12:06:41.918Z"
+    },
+    {
+      "userId": "65f4cb16-2e64-4336-9808-e624798d3d17",
+      "email": "test1742472628149@example.com",
+      "token": "2fd669",
+      "createdAt": "2025-03-20T12:10:28.664Z"
+    },
+    {
+      "userId": "83390074-2b25-475c-8acd-2743a37c48b0",
+      "email": "perf17424726696720@example.com",
+      "token": "ddda10",
+      "createdAt": "2025-03-20T12:11:10.091Z"
+    },
+    {
+      "userId": "489d2a77-6855-4417-af9e-b7f99faf0a77",
+      "email": "perf17424726702021@example.com",
+      "token": "3b1b04",
+      "createdAt": "2025-03-20T12:11:10.295Z"
+    },
+    {
+      "userId": "131d7bde-8ec6-4231-b0dd-c348cc00650c",
+      "email": "perf17424726705032@example.com",
+      "token": "168514",
+      "createdAt": "2025-03-20T12:11:10.618Z"
+    },
+    {
+      "userId": "10d3d3a2-198a-48bd-9f4e-f9207115c785",
+      "email": "perf17424726708083@example.com",
+      "token": "3a403c",
+      "createdAt": "2025-03-20T12:11:10.945Z"
+    },
+    {
+      "userId": "6c535e91-0211-4d6b-badd-91fd2e6734a9",
+      "email": "perf17424726711154@example.com",
+      "token": "add636",
+      "createdAt": "2025-03-20T12:11:11.420Z"
+    },
+    {
+      "userId": "2f4e9ed9-cd74-4f3c-9109-dfcefb298117",
+      "email": "test-user-1742472873226@example.com",
+      "token": "33ab0d",
+      "createdAt": "2025-03-20T12:14:33.772Z"
+    },
+    {
+      "userId": "20c692fb-7532-470c-8970-2cd44b362396",
+      "email": "test-user-1742472954146@example.com",
+      "token": "367163",
+      "createdAt": "2025-03-20T12:15:55.791Z"
+    },
+    {
+      "userId": "bef5beb2-bc3e-440b-a2fc-6183092ba6b5",
+      "email": "test-user-1742473035285@example.com",
+      "token": "752f79",
+      "createdAt": "2025-03-20T12:17:15.627Z"
+    },
+    {
+      "userId": "38eba47f-3b60-40df-8528-a852ec7c46d3",
+      "email": "test-user-1742473078287@example.com",
+      "token": "4067a4",
+      "createdAt": "2025-03-20T12:17:58.781Z"
+    },
+    {
+      "userId": "a67f68f1-34cf-4f90-8b94-1639adefcf17",
+      "email": "test-user-1742473126298@example.com",
+      "token": "bf77f0",
+      "createdAt": "2025-03-20T12:18:49.768Z"
+    },
+    {
+      "userId": "8d229b0f-aac1-4917-9c7b-2bdd8a1ceb82",
+      "email": "falagbe@cyreva.com",
+      "token": "40cf62",
+      "createdAt": "2025-03-20T12:29:06.333Z"
+    },
+    {
+      "userId": "eca97f4b-e271-4ea5-90b1-2c71552a1218",
+      "email": "test1742475283969@example.com",
+      "token": "7f88c4",
+      "createdAt": "2025-03-20T12:54:44.188Z"
+    },
+    {
+      "userId": "0bfc4577-f0cf-45d5-994e-008ee3f77016",
+      "email": "test1742475284805@example.com",
+      "token": "ae155d",
+      "createdAt": "2025-03-20T12:54:44.810Z"
+    },
+    {
+      "userId": "d3590e42-e8ef-4296-a8ec-537031f793c6",
+      "email": "test1742475500502@example.com",
+      "token": "1e41de",
+      "createdAt": "2025-03-20T12:58:20.696Z"
+    },
+    {
+      "userId": "4c3d19a8-099e-454e-bf8e-4920862f2027",
+      "email": "test1742475502221@example.com",
+      "token": "3560f1",
+      "createdAt": "2025-03-20T12:58:22.265Z"
+    },
+    {
+      "userId": "86c0472a-a69c-45f1-8a39-35b39284b628",
+      "email": "test1742475502594@example.com",
+      "token": "8f075e",
+      "createdAt": "2025-03-20T12:58:22.596Z"
+    },
+    {
+      "userId": "29fd9a45-bc6b-43dd-b603-1746d329dd78",
+      "email": "test1742475696992@example.com",
+      "token": "052a2c",
+      "createdAt": "2025-03-20T13:01:37.055Z"
+    },
+    {
+      "userId": "39c22823-821e-410a-8ebe-2782d97aba4c",
+      "email": "test1742475697730@example.com",
+      "token": "2b1b4e",
+      "createdAt": "2025-03-20T13:01:37.776Z"
+    },
+    {
+      "userId": "006967b6-81b7-43e8-ad8b-d354c33e9fcc",
+      "email": "test1742475698178@example.com",
+      "token": "08ce06",
+      "createdAt": "2025-03-20T13:01:38.182Z"
+    },
+    {
+      "userId": "8d285f21-b4f5-45f2-878d-7d9eb8c4a064",
+      "email": "test1742475767781@example.com",
+      "token": "c0bfd4",
+      "createdAt": "2025-03-20T13:02:47.867Z"
+    },
+    {
+      "userId": "d00c258d-7e74-42fe-ac5a-057c9c4a9a4f",
+      "email": "test1742475768346@example.com",
+      "token": "aa1e0b",
+      "createdAt": "2025-03-20T13:02:48.355Z"
+    },
+    {
+      "userId": "fdbd78d4-a4d2-49c3-9f4e-d06e022784ac",
+      "email": "test1742475768955@example.com",
+      "token": "6e5997",
+      "createdAt": "2025-03-20T13:02:48.963Z"
+    },
+    {
+      "userId": "2d5a7a44-cf05-41ff-8513-e008a51c612a",
+      "email": "testme@test.com",
+      "token": "d361e5",
+      "createdAt": "2025-03-20T13:46:57.478Z"
+    },
+    {
+      "userId": "66940af2-1f1d-451c-8901-77df6bded45d",
+      "email": "f@gmail.com",
+      "token": "e96234",
+      "createdAt": "2025-03-20T15:48:59.210Z"
+    },
+    {
+      "userId": "ec4fbcf5-03fd-4c35-84b7-6152357d6501",
+      "email": "estheralagbe8@gmail.com",
+      "token": "0711b9",
+      "createdAt": "2025-03-20T16:10:44.910Z"
+    }
+  ],
+  "smsVerifications": [],
+  "wallets": [
+    {
+      "id": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "balance": 9500,
+      "currency": "NGN",
+      "status": "active",
+      "createdAt": "2025-03-19T00:37:21.630Z"
+    },
+    {
+      "id": "b12e13c2-c7a9-4027-abcf-dd5c497c33a2",
+      "userId": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "balance": 0,
+      "currency": "NGN",
+      "status": "active",
+      "createdAt": "2025-03-19T00:58:23.234Z"
+    }
+  ],
+  "billPayments": [
+    {
+      "id": "54855266-c1b8-4e4d-acad-5771390c0ba5",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 5000,
+      "currency": "NGN",
+      "status": "completed",
+      "reference": "664efdd6-cc69-4b15-bd98-d0075547bbaa",
+      "metadata": {
+        "service_id": "ikedc_prepaid",
+        "variation_code": "prepaid"
+      },
+      "createdAt": "2025-03-19T00:37:21.690Z",
+      "transactionId": "854ed8d5-fd15-4a48-ac42-e45760beac93",
+      "completedAt": "2025-03-19T00:37:21.700Z"
+    },
+    {
+      "id": "8b86aba5-4fe3-4066-b4f1-4e814c49867f",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "water",
+      "provider": "LAGOS_WATER",
+      "customerReference": "WTR12345678",
+      "amount": 2500,
+      "currency": "NGN",
+      "status": "completed",
+      "reference": "7757a84b-a201-4788-94ea-906ed921d866",
+      "metadata": {
+        "service_id": "lagos_water",
+        "variation_code": "standard"
+      },
+      "createdAt": "2025-03-19T00:42:44.917Z",
+      "transactionId": "2901783b-2c18-4485-a970-6a201f95ef0e",
+      "completedAt": "2025-03-19T00:42:57.147Z"
+    },
+    {
+      "id": "a943744c-b9dc-47ac-ba4a-1310b1fee35f",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "internet",
+      "provider": "MTN",
+      "customerReference": "12345678901",
+      "amount": 3000,
+      "currency": "NGN",
+      "status": "completed",
+      "reference": "ba51d437-b20a-4012-930d-6fe598510e8b",
+      "metadata": {
+        "service_id": "mtn_data",
+        "variation_code": "mtn-5gb"
+      },
+      "createdAt": "2025-03-19T00:45:13.936Z",
+      "transactionId": "70187c7a-673c-4fb8-a9d6-58e7e4d87b45",
+      "completedAt": "2025-03-19T00:45:13.950Z"
+    },
+    {
+      "id": "0efa15a8-0897-4a41-a970-ecde4b751bf7",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "invalid_type",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "3fad9ac8-394a-489f-9ee3-7ea1b0acbc41",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.696Z"
+    },
+    {
+      "id": "2d36deba-9c00-4ed2-bfc5-cb15e5481e19",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": -1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "7e5070b1-6af8-4c65-b13b-b338f2a00389",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.708Z"
+    },
+    {
+      "id": "38c88ecc-1d71-495f-bed8-b6724ac7639a",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "INVALID",
+      "status": "pending",
+      "reference": "2a3ede92-1873-47de-b643-f6795c38b9dd",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.735Z"
+    },
+    {
+      "id": "ad98030f-e061-4beb-afa9-70ad82332b49",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345' OR '1'='1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "a0c4c288-662c-4380-a04c-93f2962c3bf0",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.747Z"
+    },
+    {
+      "id": "87edaf7f-2b28-4d9b-9580-ec5dd35b6798",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "<script>alert(\"XSS\")</script>",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "62ad4b5f-08db-4040-bbad-8a74be09798f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.768Z"
+    },
+    {
+      "id": "42e4117c-599c-4e5d-99e2-9ef834d6d226",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-0",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "06de31e9-954c-4309-8e51-9442f2b89ce2",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.829Z"
+    },
+    {
+      "id": "508e189f-5718-4372-b9a8-3cc6bbf5e92f",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "e5b0f067-04fe-4eb5-8c11-312e97ed5e8f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.860Z"
+    },
+    {
+      "id": "29d74a31-c6f2-4896-8124-f0735c96e0e8",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-2",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "52a24d5b-9bd5-42d7-8bf3-376673035818",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.890Z"
+    },
+    {
+      "id": "b88cf17b-3a01-487b-8b40-920586593f84",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-3",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "5e66a9a8-cc22-491e-a6c9-cf4a6d5f53fc",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.899Z"
+    },
+    {
+      "id": "534dc67c-fdf2-4e51-a597-16259aef746e",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-4",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "8d2ef842-73b4-437a-a69b-11ad01120348",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.919Z"
+    },
+    {
+      "id": "1eb6d43f-05ec-478e-a125-0abfa494c2e8",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-5",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "cf1db3aa-67f6-408a-bc61-ccb4eedbd7e9",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.968Z"
+    },
+    {
+      "id": "bd0a7c4f-57b4-4bae-a6db-96f347286532",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-6",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "9362e71e-4969-46fe-a021-fb7cffa78ce4",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.982Z"
+    },
+    {
+      "id": "4072afd5-eb33-4bfa-b431-b7abc93de828",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-7",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "97ba03d0-a869-4deb-a888-b63688b18b59",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:48.994Z"
+    },
+    {
+      "id": "9f441aa7-e9e8-4c3e-9775-2118b4f83a8b",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-8",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "604bc94e-2ff4-4364-b65e-db1a4ff3ca0b",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.013Z"
+    },
+    {
+      "id": "f340a8b7-c457-49e3-82e4-7e147e8bc2f7",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-9",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "3646b55f-52ba-4cc9-8190-caa93c025c27",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.031Z"
+    },
+    {
+      "id": "f272f9fe-3eca-4f7e-b38b-d1a4893b5a30",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-10",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "1baac70c-602b-4693-8543-d6cda8b4b1f9",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.052Z"
+    },
+    {
+      "id": "1a54eb39-9c27-4c73-ada9-c960129b1fdf",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-11",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "05b594a5-87aa-4803-8a25-a5b3b5c1b7f3",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.067Z"
+    },
+    {
+      "id": "be7b4117-cfa3-4b29-823d-abdfbe6b2cca",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-12",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "e8b88aa1-e238-46cc-9b61-1bc0b6c5f683",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.089Z"
+    },
+    {
+      "id": "1f86dbde-e0a4-45d8-94de-4c20aa05af0c",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-13",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "83b09b83-0007-4db0-ba9e-fa9fb136b8f0",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.106Z"
+    },
+    {
+      "id": "02a90043-3ea6-487d-b0f2-cec1e102eeb9",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-14",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "1676a200-f15f-4d73-b221-3ec9f1e8ca1a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.122Z"
+    },
+    {
+      "id": "b944aac9-de94-4534-9c65-12c04d45e812",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-15",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "b98c9523-612d-4c26-a9ef-82068b819dc9",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.167Z"
+    },
+    {
+      "id": "232763a7-4f32-4303-9b8e-3a6469a688a4",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-16",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "2e6a6692-bf50-4042-8993-83845698e969",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.176Z"
+    },
+    {
+      "id": "a06cba44-c2b5-4941-b361-561c1b55bf5d",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-17",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "63c7a1c0-5536-4cf8-99a0-9ef21da80cc4",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.228Z"
+    },
+    {
+      "id": "df58c949-dce1-4b2c-a57f-b0494b5173a0",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-18",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "e287c991-4463-42bb-923e-c9f08c7366e0",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.236Z"
+    },
+    {
+      "id": "cd97266a-aaa7-464d-9ba0-d5f3b7ec9587",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-19",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "488d1472-3963-4023-a8c9-b615fbf03768",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:47:49.288Z"
+    },
+    {
+      "id": "f4326006-28eb-4761-8464-f81cccd3633e",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "invalid_type",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "160cd35a-fb45-4431-b611-6a79fab6767f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.802Z"
+    },
+    {
+      "id": "c100e12d-1fd3-4f65-a765-ea9a7b36501f",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": -1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "9dabb0d1-ede2-4602-b78d-8b401400fac5",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.814Z"
+    },
+    {
+      "id": "d0d3b990-e224-4b55-a913-2960dce7e4a3",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "INVALID",
+      "status": "pending",
+      "reference": "f6d4ccfd-bbfd-40ae-917a-ec82c17b92ec",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.841Z"
+    },
+    {
+      "id": "f0ae2d84-72ae-4ea8-aab5-87b5b98f5d0e",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345' OR '1'='1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "20134206-eb6a-4fc8-a17f-0f2266468c97",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.855Z"
+    },
+    {
+      "id": "882742d9-eb6a-4ff3-809a-2f27c0e8b9ad",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "<script>alert(\"XSS\")</script>",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "1df8a6ec-80b6-4207-a6f3-6c3ab57693ed",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.876Z"
+    },
+    {
+      "id": "a04604dc-0826-43d0-adb4-72e8f87d74ab",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-0",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "d93d6af8-0f29-4624-b888-625bf0c2b27c",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.958Z"
+    },
+    {
+      "id": "6756452c-8959-48aa-a094-dc7c51326f70",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "0ef54e0e-7e2f-4a94-9be8-46cca7ad0726",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:22.972Z"
+    },
+    {
+      "id": "a5ca5e17-cf4a-4289-8cbd-0a4cc5534aec",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-2",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "76c7c217-0c97-4081-86c9-7d7c460ad057",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.017Z"
+    },
+    {
+      "id": "ce1ae526-6903-441b-88dd-8cbc62a30612",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-3",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "8b7609a2-9c29-4b31-b389-67a0580fab24",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.024Z"
+    },
+    {
+      "id": "f6a65a61-838d-429d-ba24-9f88bb002d57",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-4",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "e3ee75eb-e222-4dee-8f7e-943775005746",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.078Z"
+    },
+    {
+      "id": "73278941-15e9-48fb-965b-bbe23d6cd451",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-5",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "aaf266f7-1456-4d2f-8a7e-0b818c6ce425",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.125Z"
+    },
+    {
+      "id": "cc6d3e4b-37f5-469d-8cb9-aa7fbc8790e1",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-6",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "76e71d9b-8e0a-4025-bd73-0830b46dea1f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.155Z"
+    },
+    {
+      "id": "08fe904c-a224-4407-b603-031b835587bc",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-7",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "7be1b220-2b88-4505-a3b9-6f4711d1d39a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.162Z"
+    },
+    {
+      "id": "d77586ed-1c24-4261-820d-cfb2f84a399b",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-8",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "902d0ed7-a458-471e-a2ed-61ee5eb8113a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.182Z"
+    },
+    {
+      "id": "033d8b2f-5c32-40cd-9772-53ad1399d293",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-9",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "06940daf-0544-43f0-ad65-d22ea065d11c",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.217Z"
+    },
+    {
+      "id": "a9dfaf0f-6889-40e0-b85d-21b00e53520d",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-10",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "dbc13eb6-c6ac-4dea-98f2-a1d2f5f14007",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.226Z"
+    },
+    {
+      "id": "eb99a789-8d7e-4fd8-97ca-2b0c0a5002e5",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-11",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "75388860-6ce3-4e59-8ce8-4480ceb10c13",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.277Z"
+    },
+    {
+      "id": "6aabffd0-e092-4f09-9ae1-2a6bfb4e2186",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-12",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "89a837ef-c212-4cf7-9421-fb1eac270183",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.293Z"
+    },
+    {
+      "id": "59519713-e993-44cf-b0fa-c182960bc70f",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-13",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "afc3c292-ead5-412f-be24-39f016105717",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.323Z"
+    },
+    {
+      "id": "8f3433c2-126b-4edc-bfb3-5ce4bbf7c1ee",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-14",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "c6def8d5-4589-4b46-aaab-cabfbe01a61e",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.328Z"
+    },
+    {
+      "id": "a8c4ee88-331f-4c43-a10c-95ce48de8e4e",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-15",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "ff4781f6-c232-4484-a5f1-5afa5cc6e127",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.383Z"
+    },
+    {
+      "id": "cc53d740-457a-44e4-aa97-b9bc155a8af1",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-16",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "0f587999-96c9-4484-9154-eaefb6689f34",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.416Z"
+    },
+    {
+      "id": "4b32fe38-1ec2-4979-bc46-7572a53f6db3",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-17",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "7848914b-becb-4d7e-9062-e9575835e2c3",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.461Z"
+    },
+    {
+      "id": "6a2f78aa-5df2-42c4-be74-fcf6d24a3079",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-18",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "50e06c53-940e-4fc2-a79a-d1891c780567",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.508Z"
+    },
+    {
+      "id": "2944d011-c6f6-4663-ae5c-15d83379c69b",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-19",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "1cf59dce-651d-44fd-bcb3-f89b5eb2ab86",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:50:23.569Z"
+    },
+    {
+      "id": "24461b60-1c7e-4e47-846a-185953c3034b",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "invalid_type",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "15dda877-1a73-4b3f-b66f-d4dd4c2e8426",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.757Z"
+    },
+    {
+      "id": "3b38e515-7493-4cdb-bd52-73652547606d",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": -1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "62a103e3-27c9-4c75-ad75-99bc38e20eee",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.765Z"
+    },
+    {
+      "id": "1477c819-e294-4b9a-9dd1-da7f2c75e696",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "INVALID",
+      "status": "pending",
+      "reference": "3858a569-339e-4d30-8678-f573cca446db",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.783Z"
+    },
+    {
+      "id": "5e066c8e-56d1-40a0-8945-923217276de4",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345' OR '1'='1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "f5989d85-6429-4d6a-ae52-c4e09faae6b0",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.790Z"
+    },
+    {
+      "id": "7678e354-197b-4e5f-88b2-fe4061c90690",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "<script>alert(\"XSS\")</script>",
+      "customerReference": "12345678901",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "05e78c90-50cb-419b-a054-9cbadf98bc73",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.804Z"
+    },
+    {
+      "id": "3550727f-42fe-4171-b11a-d536eb677e5a",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-0",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "bf8d16d9-982a-4ce8-b2ae-6d68257b938a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.868Z"
+    },
+    {
+      "id": "9cc61ddd-1f53-4008-9f5b-6f5a4c130f75",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-1",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "0ddd36c0-af82-46f4-96ad-4c5183cae56f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.913Z"
+    },
+    {
+      "id": "be06de44-81d7-4fae-b16e-cb4aa902d741",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-2",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "dd828ef0-de78-45b0-8361-c00dc14f5890",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.966Z"
+    },
+    {
+      "id": "181ba382-39ab-48de-bd4d-797fe899554c",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-3",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "0c1450bd-5f15-440f-956c-28bfafd46a49",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:23.990Z"
+    },
+    {
+      "id": "b3c8f409-c630-45f8-b655-cd8c920af563",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-4",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "32db1d90-3034-46a4-95d4-5e861d73d6e3",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.035Z"
+    },
+    {
+      "id": "992264da-b546-466f-b79c-53fa943244d9",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-5",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "67f36aaa-40b0-459d-83e3-58fed48057de",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.080Z"
+    },
+    {
+      "id": "b7e05f7b-8eb4-4fe2-a701-e17697c966de",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-6",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "17b6b441-9e27-41d3-95b6-d68d78aeae8a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.109Z"
+    },
+    {
+      "id": "78620c01-052c-4550-adc8-937ba8beb003",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-7",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "40264387-7b4f-4817-9f03-f870950032e2",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.140Z"
+    },
+    {
+      "id": "5a74e47e-0e41-4bf0-928f-24f144cae452",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-8",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "11ad9ba9-f874-4b59-99e4-993234de03d1",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.185Z"
+    },
+    {
+      "id": "3fe65a89-651d-4dd1-8ac4-767180775253",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-9",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "850c577e-ee59-4aff-aa14-03ec88b45539",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.231Z"
+    },
+    {
+      "id": "9543212a-e2c7-47ef-817b-f73a3d157599",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-10",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "daff165f-ca19-499a-827c-745aeb723b0a",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.246Z"
+    },
+    {
+      "id": "5a0cd0d1-021d-47db-9df2-76795a2e6ac4",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-11",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "0e134c64-c352-45bc-ba6d-efeee2f52fd5",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.276Z"
+    },
+    {
+      "id": "e6ea4bfb-3012-453a-8d6e-0456729c09ab",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-12",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "7d02703c-7edc-496a-a244-09f3d3c5ce2f",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.291Z"
+    },
+    {
+      "id": "67698bdd-f1ff-4073-9263-27dd48d9f343",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-13",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "e5c32e52-19a2-4c38-b1ea-4871ce357938",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.337Z"
+    },
+    {
+      "id": "f5bc8758-e227-402a-9a0f-8bd8dbbc5b61",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-14",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "d41e7a37-207c-4236-a0e5-6b5035b01a46",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.368Z"
+    },
+    {
+      "id": "82825de4-f0d8-42d9-a4a6-ee032e98c8ec",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-15",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "75fd823d-4ced-44ac-95a6-ec4cf8d9ac6b",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.417Z"
+    },
+    {
+      "id": "9e0fa9d3-b2f6-4904-8531-cba02ff9da09",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-16",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "fd611f3e-020a-4ba9-8c1b-2ad8a5e87c3d",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.463Z"
+    },
+    {
+      "id": "d9ffe1d1-8a96-459a-9b9c-028273531081",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-17",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "b128bc70-5f45-440b-8674-8bcae9011f18",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.478Z"
+    },
+    {
+      "id": "e72e3198-b6b5-43a2-aed3-5368ab4376a9",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-18",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "6f338421-6550-4820-b1b0-ede731f2bebc",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.509Z"
+    },
+    {
+      "id": "f6e632fd-e2b1-4418-94dd-6ec698a97a58",
+      "userId": "342a6d0c-5815-4d94-b8c2-8ef710276448",
+      "walletId": "71990a45-484b-448d-8be8-a0f2b2eb477b",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901-19",
+      "amount": 1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "ac596dea-21a6-4c96-b7e5-b6bf5bd03c5c",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:51:24.514Z"
+    },
+    {
+      "id": "aa8a1073-59e1-496d-b7e5-99b988c266c1",
+      "userId": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "walletId": "b12e13c2-c7a9-4027-abcf-dd5c497c33a2",
+      "billType": "electricity",
+      "provider": "IKEDC",
+      "customerReference": "12345678901",
+      "amount": -1000,
+      "currency": "NGN",
+      "status": "pending",
+      "reference": "541838a2-e6eb-4081-b287-426337976d8e",
+      "metadata": {},
+      "createdAt": "2025-03-19T00:58:23.342Z"
+    }
+  ],
+  "refreshTokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWMzYmFhZi1mZDZhLTRjZDctYjM5Mi00YTgwYzg3ZjVjNmYiLCJpYXQiOjE3NDIzNDU5OTYsImV4cCI6MTc0Mjk1MDc5Nn0.zFhqYmvs5HC1pJqZOpNFfzSOyI5fSlOZMTepmBWeHUQ",
+      "userId": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "createdAt": "2025-03-19T00:59:56.032Z",
+      "expiresAt": "2025-03-26T00:59:56.032Z"
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWMzYmFhZi1mZDZhLTRjZDctYjM5Mi00YTgwYzg3ZjVjNmYiLCJpYXQiOjE3NDIzNDYwMDcsImV4cCI6MTc0Mjk1MDgwN30.9BIe6I3-orunN6begL14IlGpQX3D3xhyB7VyIGANrtI",
+      "userId": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "createdAt": "2025-03-19T01:00:07.386Z",
+      "expiresAt": "2025-03-26T01:00:07.386Z"
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZWMzYmFhZi1mZDZhLTRjZDctYjM5Mi00YTgwYzg3ZjVjNmYiLCJpYXQiOjE3NDIzNDYwOTYsImV4cCI6MTc0Mjk1MDg5Nn0.95MBBNR7c1VNw7b9wFCI_lZGrCr-mfJ3WgV_-rGSklY",
+      "userId": "3ec3baaf-fd6a-4cd7-b392-4a80c87f5c6f",
+      "createdAt": "2025-03-19T01:01:36.856Z",
+      "expiresAt": "2025-03-26T01:01:36.856Z"
+    }
+  ],
+  "trustedDevices": [
+    {
+      "id": "28a9286c-46fb-412a-97ab-6374c3a3c128",
+      "deviceId": "mobile-1742346481768",
+      "deviceName": "Test Mobile Device",
+      "deviceType": "mobile",
+      "trusted": true,
+      "lastUsed": "2025-03-19T01:08:03.407Z",
+      "dateAdded": "2025-03-19T01:08:03.286Z"
+    }
+  ],
+  "securitySettings": [
+    {
+      "id": "4e86a1c7-621b-4ada-8983-712450d86ba2",
+      "twoFactorEnabled": true,
+      "loginNotifications": true,
+      "transactionNotifications": true,
+      "highValueTransferThreshold": 50000,
+      "requireAdditionalAuthForHighValue": true,
+      "lastUpdated": "2025-03-19T01:08:03.211Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "12ccb053-2ff6-4d33-8773-f8759e5f3247",
+      "type": "login",
+      "title": "New Login Detected",
+      "message": "A new login was detected from your account on a new device.",
+      "read": true,
+      "createdAt": "2025-03-19T00:08:03.665Z"
+    },
+    {
+      "id": "0b8578a9-4f4e-44a9-becd-0540c3ef7528",
+      "type": "payment",
+      "title": "Bill Payment Successful",
+      "message": "Your bill payment of NGN 5,000 to IKEDC was successful.",
+      "read": false,
+      "createdAt": "2025-03-18T23:08:03.665Z"
+    },
+    {
+      "id": "dbff4680-5716-46ee-bb5a-fc3ec79ee5f1",
+      "type": "security",
+      "title": "Security Settings Updated",
+      "message": "Your security settings were updated. If this was not you, please contact support.",
+      "read": true,
+      "createdAt": "2025-03-18T01:08:03.665Z"
+    }
+  ],
+  "notificationPreferences": [
+    {
+      "id": "f896e376-6c1c-4b27-a559-25faa4bdd7e1",
+      "email": true,
+      "push": true,
+      "sms": false,
+      "loginAlerts": true,
+      "paymentAlerts": true,
+      "promotionalAlerts": false,
+      "lastUpdated": "2025-03-19T01:08:03.608Z"
+    }
+  ]
+}

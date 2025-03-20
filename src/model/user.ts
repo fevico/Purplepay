@@ -11,6 +11,9 @@ interface userDocument extends Document {
   verified: boolean;
   transactionPin: string;
   role: "admin" | "user";
+  tag: string;
+  tagPrivacy: "public" | "friends" | "private";
+  profilePicture: string;
 }
 
 interface methods {
@@ -30,6 +33,24 @@ const userSchema = new Schema<userDocument, {}, methods>({
   verified: { type: Boolean, default: false },
   transactionPin: { type: String },
   role: { type: String, default: "user" },
+  tag: { 
+    type: String, 
+    unique: true, 
+    sparse: true,
+    trim: true,
+    validate: {
+      validator: function(v: string) {
+        return /^[a-zA-Z0-9_]{3,20}$/.test(v);
+      },
+      message: (props: { value: string }) => `${props.value} is not a valid tag! Use 3-20 alphanumeric characters or underscores.`
+    }
+  },
+  tagPrivacy: { 
+    type: String, 
+    enum: ["public", "friends", "private"], 
+    default: "public" 
+  },
+  profilePicture: { type: String },
   // transactions: [{ type: Schema.Types.ObjectId, ref: "Transaction" }],
 }, {timestamps: true});
 

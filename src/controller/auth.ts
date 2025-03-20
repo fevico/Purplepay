@@ -1,10 +1,10 @@
 import { RequestHandler } from "express";
-import TokenModel from "src/model/authToken";
-import userModel from "src/model/user";
-import { generateToken, sendErrorRes } from "src/utils/helper";
-import { ForgetPasswordToken, sendVerificationToken } from "src/utils/mail";
+import TokenModel from "../model/authToken";
+import userModel from "../model/user";
+import { generateToken, sendErrorRes } from "../utils/helper";
+import { ForgetPasswordToken, sendVerificationToken } from "../utils/mail";
 import jwt from "jsonwebtoken";
-import passwordResetTokenModel from "src/model/passwordResetToken";
+import passwordResetTokenModel from "../model/passwordResetToken";
 
 export const createUser: RequestHandler = async (req, res) => {
   const { email, password } = req.body;

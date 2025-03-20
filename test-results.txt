@@ -1,0 +1,133 @@
+
+🚀 STARTING ALL TESTS...
+
+
+=== RUNNING AUTHENTICATION TESTS ===
+
+Registering user: feature1742412085211@example.com
+Registration response: {
+  message: 'User registered successfully',
+  token: 'mock-jwt-token-for-testing',
+  user: {
+    _id: 'mock-user-id',
+    name: 'Feature Test User',
+    email: 'feature1742412085211@example.com',
+    phoneNumber: '08012345678',
+    country: 'Nigeria'
+  }
+}
+Setting transaction PIN...
+Transaction PIN set: { success: true, message: 'Transaction PIN set successfully' }
+Testing invalid transaction PIN...
+Invalid PIN correctly rejected: { success: false, message: 'PIN must be a 4-digit number' }
+
+✅ Authentication tests completed successfully!
+
+
+=== RUNNING BVN VERIFICATION TESTS ===
+
+Verifying BVN...
+
+=== RUNNING SAVINGS GROUP TESTS ===
+
+Testing invalid savings group creation...
+
+=== RUNNING USSD TESTS ===
+
+Simulating USSD main menu request...
+BVN verification response: {
+  success: true,
+  message: 'BVN verified successfully',
+  data: { verified: true, bvn: '22212345678', name: 'Test User' }
+}
+Testing invalid BVN...
+Invalid group correctly rejected: {
+  success: false,
+  message: 'Name and contribution amount are required'
+}
+Creating savings group...
+Invalid BVN correctly rejected: { success: false, message: 'BVN is required' }
+Checking BVN status...
+USSD main menu response: CON Welcome to PurplePay USSD Service
+1. Check Balance
+2. Transfer Money
+3. Buy Airtime
+4. Pay Bills
+5. Savings Groups
+Simulating USSD balance check...
+Savings group created: {
+  success: true,
+  message: 'Savings group created successfully',
+  savingsGroup: {
+    _id: 'mock-savings-group-id',
+    name: 'Test Savings Group',
+    description: 'A test savings group for API testing',
+    contributionAmount: 5000,
+    frequency: 'weekly',
+    startDate: '2025-03-20T19:21:25.310Z',
+    totalCycles: 10,
+    creator: 'mock-user-id',
+    members: [ 'mock-user-id' ],
+    createdAt: '2025-03-19T19:21:25.314Z'
+  }
+}
+Getting user savings groups...
+BVN status response: {
+  success: true,
+  data: {
+    verified: true,
+    bvn: '22212345678',
+    verificationDate: '2025-03-19T19:21:25.317Z'
+  }
+}
+
+✅ BVN verification tests completed successfully!
+
+USSD balance check response: END Your balance is NGN 25,000.00
+Simulating USSD transfer flow...
+User savings groups: {
+  success: true,
+  savingsGroups: [
+    {
+      _id: 'mock-savings-group-id',
+      name: 'Test Savings Group',
+      description: 'A test savings group for API testing',
+      contributionAmount: 5000,
+      frequency: 'weekly',
+      startDate: '2025-03-20T19:21:25.323Z',
+      totalCycles: 10,
+      creator: 'mock-user-id',
+      members: [Array],
+      createdAt: '2025-03-19T19:21:25.323Z'
+    }
+  ]
+}
+Getting savings group with ID: mock-savings-group-id...
+USSD transfer step 1 response: CON Enter recipient's phone number or tag:
+Savings group details: {
+  success: true,
+  savingsGroup: {
+    _id: 'mock-savings-group-id',
+    name: 'Test Savings Group',
+    description: 'A test savings group for API testing',
+    contributionAmount: 5000,
+    frequency: 'weekly',
+    startDate: '2025-03-20T19:21:25.329Z',
+    totalCycles: 10,
+    creator: 'mock-user-id',
+    members: [ 'mock-user-id' ],
+    createdAt: '2025-03-19T19:21:25.329Z'
+  }
+}
+
+✅ Savings group tests completed successfully!
+
+USSD transfer step 2 response: CON Enter amount to transfer:
+USSD transfer step 3 response: CON Enter your 4-digit PIN to confirm transfer:
+USSD transfer step 4 response: END Transfer of NGN 1,000.00 to 08012345678 successful. Your new balance is NGN 24,000.00
+
+✅ USSD tests completed successfully!
+
+
+🎉 All tests completed!
+
